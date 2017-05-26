@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-def main_page(request):
+def main_page(request): #
     if (request.user.is_authenticated):
         return render(request, 'main.html', context={'logged_in': True})
     else:
