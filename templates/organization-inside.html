@@ -1,0 +1,91 @@
+{% extends 'base-registered.html' %}
+{% load static %}
+
+
+<head>
+
+    <link href={%  static "css/user_style.css" %} rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" type="text/css">
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src={% static "js/jquery.js" %}></script>
+	<script scr={%  static "js/org.js" %}></script>
+<!--     <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+</head>
+
+
+{% block content %}
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row" id="heading">
+            <div class="col-lg-12">
+                <h1 class="page-header">Vidlunnya</h1>
+
+        </div>
+        <div class="col-lg-12">
+  <ol class="breadcrumb">
+  <li><a class="fnt-header" href="index.html">ми допомагаємо дітям-сиротам із виконанням домашніх завдань</a>
+  </li>
+  </ol>
+  </div>
+  </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row user_main">
+
+            <div class="col-md-3">
+                <div id="user_main_info" class="user">
+                  <img id="user_photo" src="http://www.gravatar.com/avatar/4e258d4679ba777947ac73537effb1c3?s=47&d=http%3A%2F%2Fwww.techrepublic.com%2Fbundles%2Ftechrepubliccore%2Fimages%2Ficons%2Fstandard%2Ficon-user-default.png"/>
+                  <div class="user like-share">
+                      <button class="btn btn-default like" role="button" href="organization_outside_my.html">Зберегти</button>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="user_info_box">
+              <h3>Про організацію</h3>
+                <ul>
+                  <div class="input-group">
+                    <span class="input-group-addon addon-org">Сфери</span>
+                    <select id="multiselect" multiple="multiple" style="width: 100% !important;">
+                        <option value="1">Довкілля</option>
+                        <option value="2">Діти</option>
+                        <option value="3">Літні люди</option>
+                        <option value="4">Армія</option>
+                    </select>
+                  </div>
+            <div class="input-group">
+            <span class="input-group-addon addon-org">Місто</span>
+                <div class="ui-widget">
+                  <input id="tags" class="form-control">
+                </div>
+            </div>
+            <div class="input-group">
+            <span class="input-group-addon addon-org">Адреса</span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+            </div>
+            </ul>
+            </div>
+            <div class="col-md-4" id="user_info_box_2">
+            <h3>Контактна інформація</h3>
+            <ul>
+
+            <div class="input-group">
+            <span class="input-group-addon addon-org">Наш вебсайт</span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+            </div>
+            <div class="input-group">
+            <span class="input-group-addon addon-org">e-mail</span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+            </div>
+            </ul>
+            </div>
+        </div>
+</div>
+{% endblock %}

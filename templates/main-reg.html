@@ -1,0 +1,376 @@
+{% extends 'base-registered.html' %}
+{% load static %}
+
+
+<head>
+    {#    !!!add city script#}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <!-- Custom Fonts -->
+    <script src={%  static "js/jquery.js" %}></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+{% block content %}
+    <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div  class="container">
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Робити добро - просто і легко
+            </h1>
+        </div>
+        <!-- <div class="col-lg-9"> -->
+
+
+    </div>
+
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home"> РЕЄСТРАЦІЯ КОРИСТУВАЧА </a></li>
+        <li><a data-toggle="tab" href="#menu1"> РЕЄСТРАЦІЯ ОРГАНІЗАЦІЇ </a></li>
+        <li><a data-toggle="tab" href="#menu2"> СТВОРИТИ ПОДІЮ</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <h1 class="page-header">Реєстрація користувача
+                        </h1>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-10">
+
+
+                            <div class="form-group">
+                                <label for="example-text-input" class="col-2 col-form-label">Ім'я</label>
+                                <input class="form-control" type="text" id="example-text-input"
+                                       placeholder="Введіть ім'я" name="user"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-text-input" class="col-2 col-form-label">Прізвище</label>
+                                <!-- <div class="col-10"> -->
+                                <input class="form-control" type="text" id="example-text-input"
+                                       placeholder="Введіть приізвище" name="surname"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-search-input" class="col-2 col-form-label">Логін</label>
+                                <input class="form-control" type="search" placeholder="Введіть логін"
+                                       id="example-search-input" name="nickname" ng-model="nickname"></input>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="example-email-input" class="col-2 col-form-label">Пошта</label>
+                                <input class="form-control" type="email" placeholder="myexample@example.com"
+                                       id="example-email-input" name="email"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-password-input" class="col-2 col-form-label">Пароль</label>
+                                <input class="form-control" type="password" placeholder="Введіть пароль"
+                                       id="example-password-input" name="password"></input>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="example-password-input" class="col-2 col-form-label">Повторіть
+                                    пароль</label>
+                                <!-- <div class="col-10"> -->
+                                <input class="form-control" type="password" placeholder="Введіть пароль"
+                                       id="example-password-input" name="password_2" ng-model="password_2"></input>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleSelect1">Виберіть місто</label>
+                                <div class="ui-widget">
+                                    <input id="tags" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="login-remember" type="checkbox" name="remember" value="1">
+                                        Запам'ятати мене
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success">Зареєструватись</button>
+                                <button type="button" class="btn btn-primary">Увійти з Facebook</button>
+                                <!-- <button type="button" class="btn btn-warning">Увійти з Linkedin</button> -->
+                                <button type="button" class="btn btn-danger">Увійти з Google+</button>
+                            </div>
+
+                            <hr>
+                            <label for="example-password-input" class="col-2 col-form-label">Якщо Ви вже маєте аккаунт
+                                <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">Увійти
+                                    тут</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <!--    <h3>Menu 1</h3>
+               <p>Some content in menu 1.</p> -->
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Реєстрація організації
+                            <!-- <small>Subheading</small> -->
+                        </h1>
+
+                        <div class="alert alert-danger">
+                            <label for="example-password-input" class="col-2 col-form-label">Увага! Можливість
+                                реєстрації організацій надається тільки зареєстрованим користувачам.<a
+                                        href="user-reg.html" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                    Натисніть щоб перейти до реєстрації користувача.</a></label>
+
+                        </div>
+
+                        <hr>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+
+
+                    <div class="col-md-8">
+
+
+                        <div class="col-10">
+
+
+                            <div class="form-group">
+                                <label for="example-text-input" class="col-2 col-form-label">Назва організації</label>
+                                <input class="form-control" type="text" placeholder="Введіть назву організації"
+                                       id="example-text-input" name="orgreg" ng-model="orgreg"></input>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="example-search-input" class="col-2 col-form-label">Вебсайт</label>
+                                <input class="form-control" type="search" placeholder="www.example.com"
+                                       id="example-search-input" name="website" ng-model="website"></input>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="exampleSelect1">Виберіть тип оргіназації</label>
+
+                                <select class="form-control" id="exampleSelect1" placeholder="ccc">
+                                    <option>Nonprofit or community organization</option>
+                                    <option>Govermanet agency</option>
+                                    <option>Social enterprise</option>
+                                    <option>Recruitment firm</option>
+                                    <option>Consultant/vendor to nonprofits</option>
+                                    <option>Self initiative</option>
+                                </select>
+                            </div>
+
+                            <p class="text-muted">Контакти:</p>
+                            <div class="form-group">
+                                <label for="example-email-input" class="col-2 col-form-label">Пошта організації</label>
+                                <input class="form-control" type="email" placeholder="myexample@example.com"
+                                       id="example-email-input" name="email" ng-model="email"></input>
+
+                                <p type="submit"
+                                   ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+                              myForm.email.$dirty && myForm.email.$invalid">
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-search-input" class="col-2 col-form-label">Номер телефону
+                                    підриємства</label>
+                                <input class="form-control" type="search" placeholder="Введіть номер"
+                                       id="example-search-input" name="num" ng-model="num"></input>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label for="comment">Виберіть місто</label>
+                                        <select class="form-control" id="exampleSelect1">
+                                            <option>Київ</option>
+                                            <option>Львів</option>
+                                            <option>Одеса</option>
+                                            <option>Харків</option>
+                                            <option>Дніпро</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <label for="comment">Адреса організації</label><input class="form-control"
+                                                                                              type="search"
+                                                                                              placeholder="Введіть адресу"
+                                                                                              id="example-search-input"
+                                                                                              name="num"
+                                                                                              ng-model="num"></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Опис організації</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+
+
+                            <button type="button" class="btn btn-success">Зареєструватись</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Створити подію
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-danger">
+                        <label for="example-password-input" class="col-2 col-form-label">Увага! Можливість реєстрації
+                            подій надається тільки зареєстрованим організаціям і користувачам.<a href="user-reg.html"
+                                                                                                 onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                Натисніть щоб перейти до реєстрації організацій.</a></label>
+
+                    </div>
+                    <hr>
+                    <div class="col-md-8">
+
+                        <!-- FORM STARTS - THIS IS FOR ANGULAR -->
+                        <div class="col-10">
+
+                            <div class="form-group">
+                                <label for="example-text-input" class="col-2 col-form-label">Назва події</label>
+                                <input class="form-control" type="text" id="example-text-input"
+                                       placeholder="Введіть назву події" name="user" ng-model="user"></input>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <label for="exampleSelect1">Виберіть тип події</label>
+
+                                        <select class="form-control" id="exampleSelect1" placeholder="ccc">
+                                            <option>Разове волонтерство</option>
+                                            <option>Щотижневе</option>
+                                            <option>Волонтерство online</option>
+                                            <option>Необмежене в часі</option>
+                                            <option>Інше</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-6">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="container"> -->
+                            <div class="row">
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker5'>
+                                            <input type='text' class="form-control"/>
+                                            <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker5').datetimepicker({
+                                            defaultDate: "11/1/2013",
+                                            disabledDates: [
+                                                moment("12/25/2013"),
+                                                new Date(2013, 11 - 1, 21),
+                                                "11/22/2013 00:53"
+                                            ]
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <!-- </div> -->
+
+
+                            <p class="text-muted">Контакти:</p>
+
+                            <div class="form-group">
+                                <label for="example-email-input" class="col-2 col-form-label">Пошта адміністратора
+                                    події</label>
+                                <input class="form-control" type="email" placeholder="myexample@example.com"
+                                       id="example-email-input" name="email" ng-model="email"></input>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label for="comment">Виберіть місто</label>
+                                        <select class="form-control" id="exampleSelect1">
+                                            <option>Київ</option>
+                                            <option>Львів</option>
+                                            <option>Одеса</option>
+                                            <option>Харків</option>
+                                            <option>Дніпро</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <label for="comment">Адреса організації</label><input class="form-control"
+                                                                                              type="search"
+                                                                                              placeholder="Введіть адресу"
+                                                                                              id="example-search-input"
+                                                                                              name="num"
+                                                                                              ng-model="num"></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-search-input" class="col-2 col-form-label">Номер телефону
+                                    підриємства</label>
+                                <input class="form-control" type="search" placeholder="Введіть номер"
+                                       id="example-search-input" name="num" ng-model="num"></input>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="comment">Опис події</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+
+
+                            <button type="button" class="btn btn-success">Зареєструватись</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}

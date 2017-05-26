@@ -1,0 +1,626 @@
+{% extends 'base-registered.html' %}
+{% load static %}
+
+<head>
+{#  !!!  add city stript#}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
+    <link href={%  static "css/bootstrap.css" %} rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src={% static "js/jquery.js" %}></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+{% block content %}
+
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Робити добро - просто і легко
+                </h1>
+            </div>
+            <!-- <div class="col-lg-9"> -->
+
+
+        </div>
+
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home"> <span class="glyphicon glyphicon-volume-up"
+                                                                        aria-hidden="true"> ПОШУК ПОДІЙ </a></li>
+            <li><a data-toggle="tab" href="#menu1"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                ПОШУК ОРГАНІЗАЦІЙ </a></li>
+            <li><a data-toggle="tab" href="#menu2"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                ПОШУК КОРИСТУВАЧІВ </a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <h1 class="page-header"> Пошук подій
+                            </h1>
+
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="col-sm-12 pull-center well">
+                            <form class="form-inline" action="#" method="POST">
+                                <center>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                               aria-describedby="emailHelp" placeholder=" tag пошук(маєбути)">
+                                    </div>
+
+                                    <select class="form-control">
+                                        <option>Вибір локації</option>
+                                        <option>jgfhfhfh</option>
+                                    </select>
+
+
+                                    <a class="btn btn-primary" href="portfolio-item.html">Пошук</i></a>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="container-fluid">
+
+                            <!-- ВАЖЛИВО ТУТ ФОРМУЭТЬСЯ -->
+                            <div class="col-lg-3 sidenav">
+
+                                <h4 class="breadcrumb">Сфера діяльності</h4>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Медицина</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Освіта</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Віськове волонтерство</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Екологія</label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Все</label>
+                                </div>
+
+
+                                <h4 class="breadcrumb">За тривалістю</h4>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Разове волонтерство</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Щотежневе</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Волонетрство online</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Необмежене в часі</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Всі</label>
+                                </div>
+
+
+                                <h4 class="breadcrumb">За днем тижня</h4>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Вихідні</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Будні</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Все</label>
+                                </div>
+
+
+                                <h4 class="breadcrumb">Час</h4>
+                                <small class="caption">Від:</small>
+                                <div class="radio">
+                                    <div class="radio">
+                                        <input class="form-control" type="time" value="13:45:00"
+                                               id="example-time-input">
+                                    </div>
+                                    <small class="caption">До:</small>
+                                    <div class="radio">
+                                        <input class="form-control" type="time" value="13:45:00"
+                                               id="example-time-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-9">
+
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <ol class="breadcrumb">
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="active">One Column Portfolio</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- Project Two -->
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Two</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit
+                                            cumque vero doloremque repellendus distinctio maiores rem expedita a nam
+                                            vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+                                <!-- Project Three -->
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Three</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus,
+                                            dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis
+                                            suscipit fugiat natus velit excepturi amet commodi deleniti alias
+                                            possimus!</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+
+                                <!-- Project Four -->
+                                <div class="row">
+
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Four</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem,
+                                            consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod
+                                            modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="menu1" class="tab-pane fade">
+                <!--    <h3>Menu 1</h3>
+                   <p>Some content in menu 1.</p> -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <h1 class="page-header"> Пошук подій
+                            </h1>
+
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="col-sm-12 pull-center well">
+                            <form class="form-inline" action="#" method="POST">
+                                <center>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                               aria-describedby="emailHelp" placeholder=" tag пошук(маєбути)">
+                                    </div>
+
+                                    <select class="form-control">
+                                        <option>Вибір локації</option>
+                                        <option>jgfhfhfh</option>
+                                    </select>
+
+
+                                    <a class="btn btn-primary" href="portfolio-item.html">Пошук</i></a>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="container-fluid">
+
+                            <!-- ВАЖЛИВО ТУТ ФОРМУЭТЬСЯ -->
+                            <div class="col-lg-3 sidenav">
+
+                                <h4 class="breadcrumb">Сфера діяльності</h4>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Медицина</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Освіта</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Віськове волонтерство</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Екологія</label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Все</label>
+                                </div>
+
+
+                                <!--         <h4 class="breadcrumb">За тривалістю</h4>
+                                        <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Разове волонтерство</label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Щотежневе</label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Волонетрство online</label>
+                                  </div>
+                                   <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Необмежене в часі</label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Всі</label>
+                                  </div> -->
+
+
+                                <!--         <h4 class="breadcrumb">За днем тижня</h4>
+
+                                        <div class="checkbox">
+                                          <label><input type="checkbox" name="optradio">Вихідні</label>
+                                        </div>
+                                        <div class="checkbox">
+                                          <label><input type="checkbox" name="optradio">Будні</label>
+                                        </div>
+                                             <div class="checkbox">
+                                          <label><input type="checkbox" name="optradio">Все</label>
+                                        </div>
+                                        <h4 class="breadcrumb">Час</h4>
+                                        <small class="caption">Від:</small>
+                                          <div class="radio">
+                                      <div class="radio">
+                                        <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                                      </div>
+                                      <small class="caption">До:</small>
+                                      <div class="radio">
+                                        <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                                      </div>
+                                      </div> -->
+                            </div>
+
+                            <div class="col-lg-9">
+
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <ol class="breadcrumb">
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="active">One Column Portfolio</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- Project Two -->
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Two</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit
+                                            cumque vero doloremque repellendus distinctio maiores rem expedita a nam
+                                            vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+                                <!-- Project Three -->
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Three</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus,
+                                            dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis
+                                            suscipit fugiat natus velit excepturi amet commodi deleniti alias
+                                            possimus!</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+
+                                <!-- Project Four -->
+                                <div class="row">
+
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Four</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem,
+                                            consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod
+                                            modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- the last one is ? -->
+            <div id="menu2" class="tab-pane fade">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <h1 class="page-header"> Пошук подій
+                            </h1>
+
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="col-sm-12 pull-center well">
+                            <form class="form-inline" action="#" method="POST">
+                                <center>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                               aria-describedby="emailHelp" placeholder=" tag пошук(маєбути)">
+                                    </div>
+
+                                    <select class="form-control">
+                                        <option>Вибір локації</option>
+                                        <option>jgfhfhfh</option>
+                                    </select>
+
+
+                                    <a class="btn btn-primary" href="portfolio-item.html">Пошук</i></a>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="container-fluid">
+
+                            <!-- ВАЖЛИВО ТУТ ФОРМУЭТЬСЯ -->
+                            <div class="col-lg-3 sidenav">
+
+                                <h4 class="breadcrumb">Сфера діяльності</h4>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Медицина</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Освіта</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Віськове волонтерство</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Екологія</label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="optradio">Все</label>
+                                </div>
+
+
+                                <!--              <h4 class="breadcrumb">За тривалістю</h4>
+                                             <div class="checkbox">
+                                         <label><input type="checkbox" name="optradio">Разове волонтерство</label>
+                                       </div>
+                                       <div class="checkbox">
+                                         <label><input type="checkbox" name="optradio">Щотежневе</label>
+                                       </div>
+                                       <div class="checkbox">
+                                         <label><input type="checkbox" name="optradio">Волонетрство online</label>
+                                       </div>
+                                        <div class="checkbox">
+                                         <label><input type="checkbox" name="optradio">Необмежене в часі</label>
+                                       </div>
+                                       <div class="checkbox">
+                                         <label><input type="checkbox" name="optradio">Всі</label>
+                                       </div> -->
+
+
+                                <!--           <h4 class="breadcrumb">За днем тижня</h4>
+
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" name="optradio">Вихідні</label>
+                                          </div>
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" name="optradio">Будні</label>
+                                          </div>
+                                               <div class="checkbox">
+                                            <label><input type="checkbox" name="optradio">Все</label>
+                                          </div>
+                                          <h4 class="breadcrumb">Час</h4>
+                                          <small class="caption">Від:</small>
+                                            <div class="radio">
+                                        <div class="radio">
+                                          <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                                        </div>
+                                        <small class="caption">До:</small>
+                                        <div class="radio">
+                                          <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                                        </div>
+                                        </div> -->
+                            </div>
+
+                            <div class="col-lg-9">
+
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <ol class="breadcrumb">
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="active">One Column Portfolio</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- Project Two -->
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Two</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit
+                                            cumque vero doloremque repellendus distinctio maiores rem expedita a nam
+                                            vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+                                <!-- Project Three -->
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Three</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus,
+                                            dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis
+                                            suscipit fugiat natus velit excepturi amet commodi deleniti alias
+                                            possimus!</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+
+                                <!-- Project Four -->
+                                <div class="row">
+
+                                    <div class="col-md-7">
+                                        <a href="portfolio-item.html">
+                                            <img class="img-responsive img-hover" src="http://placehold.it/700x300"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h3>Project Four</h3>
+                                        <h4>Subheading</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem,
+                                            consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod
+                                            modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+                                        <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <hr>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
