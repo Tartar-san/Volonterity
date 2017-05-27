@@ -21,8 +21,6 @@ class ActivityTypes(models.Model):
 # extending django User model with additional fields
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=40)
-    last_name = models.CharField(max_length=40)
     city = models.ForeignKey(Cities)
 
     def __str__(self):
