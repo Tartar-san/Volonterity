@@ -3,23 +3,18 @@
 
 <head>
 {#  !!!  add city stript#}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Modern Business - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
-    <link href={%  static "css/bootstrap.css" %} rel="stylesheet">
-    <!-- Custom CSS -->
+    {% block css %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{%  static 'css/bootstrap.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    {% endblock %}
 
-    <script src={% static "js/jquery.js" %}></script>
+    {% block js %}
+    <script src="{% static 'js/jquery.js' %}"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'user.js' %}"></script>
+    {% endblock %}
 </head>
 
 {% block content %}
@@ -73,7 +68,7 @@
                                     </div>
 
                                     <select class="form-control">
-                                        <option>Вибір локації</option>
+                                        <option>Вибір міста</option>
                                         <option>jgfhfhfh</option>
                                     </select>
 

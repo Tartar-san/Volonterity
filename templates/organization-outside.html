@@ -2,15 +2,17 @@
 {% load static %}
 
 <head>
-
-
-    <!-- Custom Fonts -->
-    <link href={% static "css/user_style.css" %} rel="stylesheet">
-     <script src={%  static "js/jquery.js" %}></script>
-<!--     <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    {% block css %}
+    <link href="{% static 'css/user_style.css' %}" rel="stylesheet">
+    {% endblock %}
+    {% block js %}
+    <script src="{%  static 'js/jquery.js' %}"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script scr={%  static "js/out-org.js" %}></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+{#	<script src="{%  static 'js/out-org.js' %}"></script>#}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="{% static 'js/carousel.js' %}"></script>
+
+    {% endblock %}
 </head>
 
 {% block content %}

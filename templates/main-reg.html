@@ -3,16 +3,15 @@
 
 
 <head>
-    {#    !!!add city script#}
-    <!-- Custom CSS -->
+    {% block css %}
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    {% endblock %}
 
-
-    <!-- Custom Fonts -->
+    {% block js %}
     <script src={%  static "js/jquery.js" %}></script>
-
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    {% endblock %}
 </head>
 
 {% block content %}

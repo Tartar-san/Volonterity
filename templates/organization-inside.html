@@ -3,18 +3,20 @@
 
 
 <head>
-
-    <link href={%  static "css/user_style.css" %} rel="stylesheet">
+    {% block css %}
+    <link href="{%  static 'css/user_style.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" type="text/css">
+    {% endblock %}
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src={% static "js/jquery.js" %}></script>
-	<script scr={%  static "js/org.js" %}></script>
-<!--     <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    {% block js %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{%  static 'js/org.js' %}"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="{% static 'js/city_tags.js' %}"></script>
+    <script src="{% static 'js/interests_multiselect.js' %}"></script>
+    {% endblock %}
 </head>
 
 
