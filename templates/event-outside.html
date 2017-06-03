@@ -9,12 +9,13 @@
     {% endblock %}
 
     {% block js %}
-	<script src="{% static 'js/event.js' %}"></script>
 {#    <script src="{%  static 'js/jquery.js' %}"></script>#}
     <!--     <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="{% static 'js/carousel-org.js' %}"></script>
+
     {% endblock %}
 </head>
 
@@ -112,8 +113,6 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#myCarousel">Учасники</a></li>
                     <li><a href="#comments">Коментарі</a></li>
-                    <li><a href="#myCarousel1">Схожі події</a></li>
-
                     <div id="hidden_opt"><a>сховати</a></div>
                 </ul>
 
@@ -122,17 +121,17 @@
                     <div class="carousel slide tab-pane fade in active" id="myCarousel">
                         <div class="carousel-inner">
                             <div class="item active" id="car">
-                                <div class="col-md-4"><a href="#"><img src="static/anton.jpg"
+                                <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4/fff&amp;text=4"
                                                                        class="img-responsive"></a>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="col-md-4"><a href="#"><img src="static/oksana.jpg"
+                                <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4/fff&amp;text=4"
                                                                        class="img-responsive"></a>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="col-md-4"><a href="#"><img src="static/orest.jpg"
+                                <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4/fff&amp;text=4"
                                                                        class="img-responsive"></a>
                                 </div>
                             </div>
@@ -238,235 +237,3 @@
 {% endblock %}
 
 
-{% extends 'base-registered.html' %}
-{% load static %}
-
-
-<head>
-    {% block css %}
-    <link href="{%  static 'css/user_style.css' %}" rel="stylesheet">
-    {% endblock %}
-
-    {% block js %}
-    <script src="{%  static 'js/jquery.js' %}" ></script>
-	<script src="{%  static  'js/event.js' %}"></script>
-    <!--     <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-    {% endblock %}
-</head>
-
-{% block content %}
-    <div class="container">
-
-        <!-- Page Heading/Breadcrumbs -->
-        <div class="row" id="heading">
-            <div class="col-lg-12">
-                <h1 class="page-header">Старший брат</h1>
-            </div>
-            <div class="col-lg-12">
-                <ol class="breadcrumb">
-                    <li><a class="fnt-header" href="index.html">ми допомагаємо дітям-сиротам із виконанням домашніх
-                        завдань</a>
-                    </li>
-                </ol>
-            </div>
-
-        </div>
-
-
-        <!-- /.row -->
-
-        <!-- Portfolio Item Row -->
-        <div class="row user_main">
-
-            <div class="col-md-3">
-                <div id="user_main_info" class="user">
-                    <img id="user_photo"
-                         src="http://www.gravatar.com/avatar/4e258d4679ba777947ac73537effb1c3?s=47&d=http%3A%2F%2Fwww.techrepublic.com%2Fbundles%2Ftechrepubliccore%2Fimages%2Ficons%2Fstandard%2Ficon-user-default.png"/>
-                </div>
-                <div class="user like-share">
-                    <a class="btn btn-default like" role="button" href="event_inside.html">Редагувати</a></div>
-
-            </div>
-
-            <div class="col-md-4" id="user_info_box">
-                <h3>Про подію</h3>
-                <ul>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Сфери</span>
-                        <div class="form-control about"><a>діти</a></div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Місто</span>
-                        <div class="form-control about"><a>Львів</a></div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Адреса</span>
-                        <div class="form-control about"><a>Хоткевича, 17/2А</a></div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Час</span>
-                        <div class="form-control about"><a>ЧТ, ПТ, 13:00-15:00</a></div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Вид</span>
-                        <div class="form-control about"><a>багаторазова</a></div>
-                    </div>
-
-                </ul>
-            </div>
-            <div class="col-md-4" id="user_info_box_2">
-                <h3>Контактна інформація</h3>
-                <ul>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Наш вебсайт</span>
-                        <div class="form-control about"><a href="https://www.google.com.ua">www.google.com.ua</a></div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">e-mail</span>
-                        <div class="form-control about" id="out_mail"><a href="https://mail.google.com">yaryna.korduba@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Знайдіть нас</span>
-                        <div class="form-control about">
-                            <img class="logo soc-logo" src="static/fb_logo.png"/>
-                            <img class="logo soc-logo" src="static/twit_logo.png"/>
-                            <img class="logo soc-logo" src="static/insta_logo.png"/>
-                        </div>
-                </ul>
-
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-
-        <hr id="user_hr">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#myCarousel">Учасники</a></li>
-                    <li><a href="#comments">Коментарі</a></li>
-                    <li><a href="#myCarousel1">Схожі події</a></li>
-
-                    <div id="hidden_opt"><a>сховати</a></div>
-                </ul>
-
-
-                <div class="tab-content">
-                    <div class="carousel slide tab-pane fade in active" id="myCarousel">
-                        <div class="carousel-inner">
-                            <div class="item active" id="car">
-                                <div class="col-md-4"><a href="#"><img src="static/anton.jpg"
-                                                                       class="img-responsive"></a></div>
-                            </div>
-                            <div class="item">
-                                <div class="col-md-4"><a href="#"><img src="static/oksana.jpg"
-                                                                       class="img-responsive"></a></div>
-                            </div>
-                            <div class="item">
-                                <div class="col-md-4"><a href="#"><img src="static/orest.jpg"
-                                                                       class="img-responsive"></a></div>
-                            </div>
-                            <div class="item">
-                                <div class="col-md-4"><a href="#"><img
-                                        src="http://placehold.it/500/f4f4f4/fff&amp;text=4" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-md-4"><a href="#"><img
-                                        src="http://placehold.it/500/fcfcfc/333&amp;text=5" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-md-4"><a href="#"><img
-                                        src="http://placehold.it/500/f477f4/fff&amp;text=6" class="img-responsive"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i
-                                class="glyphicon glyphicon-chevron-left"></i></a>
-
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next"><i
-                                class="glyphicon glyphicon-chevron-right"></i></a>
-                    </div>
-
-                    <div class="slide tab-pane fade" id="comments">
-                        <div class="detailBox">
-                            <div class="titleBox">
-                                <label>Залиште Ваш коментар</label>
-                                <button type="button" class="close" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="commentBox">
-                                Будь ласка, будьте ввічливими :)
-                            </div>
-                            <div class="actionBox">
-                                <ul class="commentList">
-                                    <li>
-                                        <div class="commenterImage">
-                                            <img src="http://placekitten.com/50/50"/>
-                                        </div>
-                                        <div class="commentText">
-                                            <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="commenterImage">
-                                            <img src="http://placekitten.com/45/45"/>
-                                        </div>
-                                        <div class="commentText">
-                                            <p class="">Hello this is a test comment and this comment is particularly
-                                                very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="commenterImage">
-                                            <img src="http://placekitten.com/40/40"/>
-                                        </div>
-                                        <div class="commentText">
-                                            <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                                <form class="form-inline" role="form">
-                                    <div class="form-group">
-                                        <input class="form-control" id="comment_input" type="text"
-                                               placeholder="Your comments"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="btn btn-default">Прокоментувати</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <hr id="user_hr">
-
-        <div class="row">
-            <div class="col-md-11">
-                <h3>Додаткова інформація</h3>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-                <p>Працюємо із неповносправними дітьми. Вони потребують вашої підтримки!</p>
-            </div>
-        </div>
-    </div>
-
-{% endblock %}
