@@ -2,26 +2,28 @@
 {% load static %}
 
 
-<head> <!---->
+ <!---->
 
 
     <!-- Custom Fonts -->
+    {% block css %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="{%  static 'css/user_style.css' %}" rel="stylesheet">
 
-    <link href="{%  static 'css/user_style.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" \
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" \
-          type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" type="text/css">
+    <link href="{% static 'css/user_style.css' %}" rel="stylesheet">
+    {% endblock %}
 
-
-    <script src="{% static 'js/jquery.js' %}"></script>
-	<script scr="{%  static 'js/user.js' %}"></script>
+    {% block js %}
+<!--     <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="{% static 'js/city_tags.js' %}"></script>
+    <script src="{% static 'js/interests_multiselect.js' %}"></script>
 
-</head>
+    {% endblock %}
+
+
 
 {% block content %}
 <div class="container">
@@ -32,11 +34,10 @@
                 <h1 class="page-header">Taras Shevchenko</h1>
             </div>
             <div class="col-lg-12">
-  <ol class="breadcrumb">
-  <li><a class="fnt-header" href="index.html">я допомагаю дітям-сиротам із виконанням домашніх завдань, я допомагаю дітям-сиротам із виконанням домашніх завдань, я допомагаю дітям-сиротам із виконанням домашніх завдань, я допомагаю дітям-сиротам із виконанням домашніх завдань</a>
-  </li>
-  </ol>
-  </div>
+                <div class="form-group">
+  <textarea class="form-control" placeholder="Введіть коротку інформацію про себе" rows="1" id="comment"></textarea>
+</div>
+            </div>
         </div>
         <!-- /.row -->
 
@@ -52,7 +53,7 @@
             </div>
 
             <div class="col-md-4" id="user_info_box">
-              <h3>Про менеч</h3>
+              <h3>Про мене</h3>
                 <ul>
                    <div class="input-group">
                      <span class="input-group-addon addon-org">Сфери</span>
@@ -64,11 +65,11 @@
                      </select>
                    </div>
                    <div class="input-group">
-                  <span class="input-group-addon addon-org">Місто</span>
-                      <div class="ui-widget">
-                        <input id="tags" class="form-control">
-                      </div>
-                  </div>
+            <span class="input-group-addon addon-org">Місто</span>
+                <div class="ui-widget">
+                  <input id="tags" class="form-control">
+                </div>
+            </div>
                   <div class="input-group">
             <span class="input-group-addon addon-org">Адреса</span>
             <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">

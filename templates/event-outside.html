@@ -1,18 +1,22 @@
 {% extends 'base-registered.html' %}
 {% load static %}
 
-
 <head>
-    <!-- Custom Fonts -->
-    <link href={%  static "css/user_style.css" %} rel="stylesheet">
+    {% block css %}
+    <link href="{%  static 'css/try_comments.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href={%  static 'css/user_style.css' %} rel="stylesheet">
+    {% endblock %}
 
-    <script src={%  static "js/jquery.js" %} ></script>
-	<script src={%  static  "js/event.js" %}></script>
+    {% block js %}
+{#    <script src="{%  static 'js/jquery.js' %}"></script>#}
     <!--     <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type={% static "text/javascript" %}
+    <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="{% static 'js/carousel-org.js' %}"></script>
 
+    {% endblock %}
 </head>
 
 {% block content %}
@@ -94,6 +98,7 @@
                             <img class="logo soc-logo" src="static/twit_logo.png"/>
                             <img class="logo soc-logo" src="static/insta_logo.png"/>
                         </div>
+                    </div>
                 </ul>
 
             </div>
@@ -108,8 +113,6 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#myCarousel">Учасники</a></li>
                     <li><a href="#comments">Коментарі</a></li>
-                    <li><a href="#myCarousel1">Схожі події</a></li>
-
                     <div id="hidden_opt"><a>сховати</a></div>
                 </ul>
 
@@ -118,31 +121,34 @@
                     <div class="carousel slide tab-pane fade in active" id="myCarousel">
                         <div class="carousel-inner">
                             <div class="item active" id="car">
-                                <div class="col-md-4"><a href="#"><img src="static/anton.jpg"
-                                                                       class="img-responsive"></a></div>
+                                <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4/fff&amp;text=4"
+                                                                       class="img-responsive"></a>
+                                </div>
                             </div>
                             <div class="item">
-                                <div class="col-md-4"><a href="#"><img src="static/oksana.jpg"
-                                                                       class="img-responsive"></a></div>
+                                <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4/fff&amp;text=4"
+                                                                       class="img-responsive"></a>
+                                </div>
                             </div>
                             <div class="item">
-                                <div class="col-md-4"><a href="#"><img src="static/orest.jpg"
-                                                                       class="img-responsive"></a></div>
-                            </div>
-                            <div class="item">
-                                <div class="col-md-4"><a href="#"><img
-                                        src="http://placehold.it/500/f4f4f4/fff&amp;text=4" class="img-responsive"></a>
+                                <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4/fff&amp;text=4"
+                                                                       class="img-responsive"></a>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="col-md-4"><a href="#"><img
-                                        src="http://placehold.it/500/fcfcfc/333&amp;text=5" class="img-responsive"></a>
-                                </div>
+                                        src="http://placehold.it/500/f4f4f4/fff&amp;text=4"
+                                        class="img-responsive"></a></div>
                             </div>
                             <div class="item">
                                 <div class="col-md-4"><a href="#"><img
-                                        src="http://placehold.it/500/f477f4/fff&amp;text=6" class="img-responsive"></a>
-                                </div>
+                                        src="http://placehold.it/500/fcfcfc/333&amp;text=5"
+                                        class="img-responsive"></a></div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4"><a href="#"><img
+                                        src="http://placehold.it/500/f477f4/fff&amp;text=6"
+                                        class="img-responsive"></a></div>
                             </div>
                         </div>
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i
@@ -178,7 +184,8 @@
                                         </div>
                                         <div class="commentText">
                                             <p class="">Hello this is a test comment and this comment is particularly
-                                                very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                                very
+                                                long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
 
                                         </div>
                                     </li>
@@ -227,5 +234,6 @@
             </div>
         </div>
     </div>
-
 {% endblock %}
+
+
