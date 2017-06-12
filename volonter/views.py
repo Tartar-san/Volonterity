@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
 
 
 def main_page(request): #
@@ -77,7 +78,10 @@ def about_us(request):
         return render(request, 'about-us.html', context={'logged_in': False})
 
 
+def logout_view(request):
+    logout(request)
+    return redirect('/')
 
-
-
+def registration(request):
+    pass
 

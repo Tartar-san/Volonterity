@@ -20,14 +20,14 @@ from volonter.views import *
 
 urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^logout/$', logout_view, name='logout'),
     url(r'^$', main_page, name='main'),
     url(r'^admin/', admin.site.urls),
     url(r'^event_inside/$', event_inside),
     url(r'^event_outside/$', event_outside),
     url(r'^organization_inside/$', organization_inside),
     url(r'^organization_outside/$', organization_outside),
-    url(r'^enter/$', enter),
+    url(r'^enter/$', auth_views.login),
     url(r'^about_us/$', about_us),
     url(r'^our_team/$', our_team),
     url(r'^search/$', search),

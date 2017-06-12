@@ -20,24 +20,9 @@
                 <h1 class="text-center login-title">Увійти в існуючий аккаунт</h1>
                 <!-- <div class="account-wall"> -->
 
-                <form class="form-signin">
-
-                    <input type="text" class="form-control" placeholder="Email" required autofocus>
-
-                    <input type="password" class="form-control" placeholder="Password" required>
-
-                    <button href="" class="btn btn-lg btn-primary btn-block" type="submit">
-                        Увійти
-                    </button>
-
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                <input id="login-remember" type="checkbox" name="remember" value="1"> Запам'ятати мене
-                            </label>
-                        </div>
-                    </div>
-                    <a href="user-reg.html" class="text-center new-account"> Створити аккаунт </a>
+                <form class="form-signin" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
                 </form>
             </div>
         </div>
