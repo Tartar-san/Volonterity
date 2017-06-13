@@ -53,7 +53,7 @@
 }
 
 .about a {
-  background-color: #933a85;
+  /*background-color: #933a85;*/
 }
 
 .btn-default {
@@ -122,6 +122,10 @@
     background: #935987;
 }
 
+
+/*footer styling*/
+
+/*end footer styling*/
 
 
 /*end main colorful style*/
