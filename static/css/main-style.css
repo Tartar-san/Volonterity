@@ -1,6 +1,115 @@
 .img-hover {
-    width:350px;
-    height:350px;
+    width:360px;
+    height:360px;
     object-fit: cover;
     overflow: hidden;
 }
+
+.navbar-inverse .navbar-nav li a {
+  color: white;
+}
+.navbar .navbar-right li:first-child{
+  background: #006203;
+}
+
+.navbar .navbar-right li:nth-child(2){
+    background: rgba(15, 151, 0, 0.71);
+}
+
+.navbar .navbar-right li:nth-child(3){
+  background: rgba(48, 203, 0, 0.77);
+}
+
+.navbar .navbar-right li:nth-child(4){
+    background: rgba(74, 229, 74, 0.72);
+
+}
+
+.navbar .navbar-right li:nth-child(5){
+    background: #006203;
+
+}
+
+
+.navbar .navbar-right li {
+  top: 20%;
+  vertical-align: middle;
+
+}
+
+#header-cont {
+  background: rgba(0, 0, 0, 0.65);
+  border: none;
+}
+
+
+
+.panel .panel-heading {
+  color: white;
+  background-color: #933a85;
+}
+
+.about a {
+  background-color: #933a85;
+}
+
+.btn-default {
+  background: #93708e;
+  color: white;
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:focus, .btn-default.active,  .btn-default:active:focus {
+  background: #933977;
+  color: white;
+}
+
+
+#myCarousel {
+  margin-top: 4%;
+  height:70%;
+  padding: 0;
+  /*height: 100%;*/
+  /*margin: 0 auto;*/
+  /*margin-right: auto;*/
+  }
+
+#ripka_logo {
+  margin-top: 4%;
+  width: 35%;
+}
+
+ .navbar {
+  min-height: 80px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-right {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.col-md-4 .img-portfolio .img-responsive .img-hover {
+  width: 360px;
+}
+
+.img-portfolio a {
+    color: #006203;
+}
+
+.pagination li a {
+    color: #006203;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background: #006203;
+}
+
+
+
+/*end main colorful style*/
