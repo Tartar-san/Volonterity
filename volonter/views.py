@@ -82,6 +82,11 @@ def logout_view(request):
     logout(request)
     return redirect('/')
 
+
 def registration(request):
     pass
+
+
+def custom404_view(request):
+    return render(request, '404page.html')
 

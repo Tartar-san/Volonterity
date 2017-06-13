@@ -32,5 +32,6 @@ urlpatterns = [
     url(r'^our_team/$', our_team),
     url(r'^search/$', search),
     url(r'^user_inside/$', user_inside),
-    url(r'^user_outside/$', user_outside)
+    url(r'^user_outside/$', user_outside),
+    url(r'^not_available/$', custom404_view)
     ]
