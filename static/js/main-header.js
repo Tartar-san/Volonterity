@@ -2,7 +2,7 @@ $(window).on("scroll", function() {
 
     if($(window).scrollTop() > 50) {
         $(".navbar-fixed-top").addClass("active");
-        $(".navbar-fixed-top").css("background", "rgb(0,0,0,0.50)");
+        $(".navbar-fixed-top").css("background", "rgb(0,0,0,0.50)"); //.....
 
     }
 
