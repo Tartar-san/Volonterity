@@ -100,7 +100,7 @@ max-height: 100%;
 }
 
 .about a {
-  color: #2E7D32;
+  color: inherit;
 }
 
 .btn-primary {
@@ -173,7 +173,7 @@ padding-left: 0;
 
 .addon-org {
    font-weight: bold;
-   color: #931985;
+   color: inherit;
 
 }
 
@@ -291,7 +291,7 @@ float: right;
 }
 
 #comments, #nav-tabs, a {
-  color: black;
+  color: inherit;
   opacity: 1;
 }
 
