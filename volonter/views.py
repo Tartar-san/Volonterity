@@ -93,7 +93,15 @@ def registration(request):
 
 # POST_METHOD
 def user_registration(request):
-    return redirect('/not_available')
+    if (request.method == 'POST'):
+        form = UserForm(request.POST)
+
+        if form.is_valid():
+
+            return redirect()
+
+    else:
+        return redirect('/not_available')
 
 def registration_confirmation(request):
 #    user = UserProfile.objects.get(confirmation_url = url)
