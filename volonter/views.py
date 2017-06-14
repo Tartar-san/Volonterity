@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
-from .forms import RegistrationForm, UserForm
+from .forms import UserForm
 from .models import *
 
 def main_page(request): #
@@ -87,7 +87,7 @@ def logout_view(request):
 def registration(request):
     if (not request.user.is_authenticated):
         form = UserForm()
-        return render(request, 'main-reg.html', context={'logged_in': True, 'form' : form})
+        return render(request, 'main-reg.html', context={'logged_in': False, 'form' : form})
     else:
         return redirect('/not_available')
 
