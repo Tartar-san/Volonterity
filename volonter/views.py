@@ -114,3 +114,5 @@ def registration_confirmation(request):
 def custom404_view(request):
     return render(request, '404page.html')
 
+def after_registration_view(request):
+    return render(request, 'check_email_after_registration.html', context={'logged_in': False})
