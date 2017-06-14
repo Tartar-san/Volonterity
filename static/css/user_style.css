@@ -340,10 +340,10 @@ float: right;
 #comment {
   max-width: 100%;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 40px;
   border-radius: 3%;
-  overflow: auto;
-  height: auto;
+  /*overflow: auto;*/
+  /*height: auto;*/
 }
 
 
