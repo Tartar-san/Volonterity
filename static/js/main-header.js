@@ -17,6 +17,4 @@ $(window).on("scroll", function() {
 
     $(".panel").addClass("animated zoomIn");
 
-});/**
- * Created by yaryna on 13.06.17.
- */
+});

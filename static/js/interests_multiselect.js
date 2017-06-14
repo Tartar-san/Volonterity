@@ -16,8 +16,4 @@
       $('.btn-default').css('text-align','center');
       $(".caret").hide();
 
-
-
-      // $("#comment").autoGrow();
-
 } );
