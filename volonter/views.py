@@ -87,7 +87,7 @@ def logout_view(request):
 def registration(request):
     if (not request.user.is_authenticated):
         form = UserForm()
-        return render(request, 'main-reg.html', context={'logged_in': True, 'form' : form})
+        return render(request, 'main-reg.html', context={'logged_in': False, 'form' : form})
     else:
         return redirect('/not_available')
 
