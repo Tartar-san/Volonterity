@@ -19,7 +19,7 @@ from django.contrib.auth import views as auth_views
 from volonter.views import *
 
 urlpatterns = [
-    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^login/$', auth_views.login, {'template_name': 'enter.html'}, name='login' ),
     url(r'^logout/$', logout_view, name='logout'),
     url(r'^$', main_page, name='main'),
     url(r'^admin/', admin.site.urls),
@@ -27,11 +27,13 @@ urlpatterns = [
     url(r'^event_outside/$', event_outside),
     url(r'^organization_inside/$', organization_inside),
     url(r'^organization_outside/$', organization_outside),
-    url(r'^enter/$', auth_views.login),
+    url(r'^enter/$', auth_views.login, {'template_name': 'enter.html'}),
     url(r'^about_us/$', about_us),
     url(r'^our_team/$', our_team),
     url(r'^search/$', search),
     url(r'^user_inside/$', user_inside),
     url(r'^user_outside/$', user_outside),
-    url(r'^not_available/$', custom404_view)
+    url(r'^not_available/$', custom404_view),
+    url(r'^registration/$', registration),
+    url(r'^user_registration/$', user_registration)
     ]

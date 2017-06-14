@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
-
+from .forms import RegistrationForm, UserForm
+from .models import *
 
 def main_page(request): #
     if (request.user.is_authenticated):
@@ -82,9 +83,24 @@ def logout_view(request):
     logout(request)
     return redirect('/')
 
-
+# GET METHOD
 def registration(request):
+    if (not request.user.is_authenticated):
+        form = UserForm()
+        return render(request, 'main-reg.html', context={'logged_in': True, 'form' : form})
+    else:
+        return redirect('/not_available')
+
+# POST_METHOD
+def user_registration(request):
+    return redirect('/not_available')
+
+def registration_confirmation(request):
+#    user = UserProfile.objects.get(confirmation_url = url)
+#    user.confirmed = True
     pass
+
+
 
 
 def custom404_view(request):
