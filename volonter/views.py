@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
-from .forms import UserForm
+from .forms import UserForm, EventForm
 from .models import *
 
 def main_page(request): #
@@ -83,33 +83,41 @@ def logout_view(request):
     logout(request)
     return redirect('/')
 
-# GET METHOD
-def registration(request):
-    if (not request.user.is_authenticated):
-        form = UserForm()
-        return render(request, 'main-reg.html', context={'logged_in': False, 'form' : form})
-    else:
-        return redirect('/not_available')
 
-# POST_METHOD
 def user_registration(request):
     if (request.method == 'POST'):
         form = UserForm(request.POST)
 
         if form.is_valid():
 
-            return redirect()
+
+            return redirect('/')
+
 
     else:
-        return redirect('/not_available')
+        form = UserForm()
+
+    return render(request, 'user_registration.html', context={"logged_in": False, "form": form})
+
+def create_event(request):
+    if (request.method == 'POST'):
+        form = Event(request.POST)
+
+        if form.is_valid():
+
+            return redirect('/')
+    else:
+        form = EventForm()
+
+    return render(request, 'create_event.html', context={"logged_in": True, "form": form})
+
+def create_organization(request):
+    return redirect('/not_available')
 
 def registration_confirmation(request):
 #    user = UserProfile.objects.get(confirmation_url = url)
 #    user.confirmed = True
     pass
-
-
-
 
 def custom404_view(request):
     return render(request, '404page.html')

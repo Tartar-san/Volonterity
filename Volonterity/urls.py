@@ -34,7 +34,7 @@ urlpatterns = [
     url(r'^user_inside/$', user_inside),
     url(r'^user_outside/$', user_outside),
     url(r'^not_available/$', custom404_view),
-    url(r'^registration/$', registration),
-    url(r'^user_registration/$', user_registration),
-    url(r'^final_step/$', after_registration_view)
+    url(r'^final_step/$', after_registration_view),
+    url(r'^registration/$', user_registration),
+    url(r'^create_event/$', create_event)
     ]
