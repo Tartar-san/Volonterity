@@ -1,14 +1,13 @@
 body {
   /**/
+  margin-top: 2%;
 }
 
 hr {
   width: 100%;
 }
 
-.navbar-header {
-  width: 40%;
-}
+
 .logo {
   width: 40px;
   border-radius: 7%;
@@ -95,6 +94,14 @@ max-height: 100%;
 
 }
 
+.bordered-form:hover, .bordered-form:active, .bordered-form:focus, .bordered-form:active:focus {
+  border-color: rgba(130, 200, 90, 0.8);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(130, 200, 90, 0.6);
+}
+
+.about a {
+  color: #2E7D32;
+}
 
 .btn-primary {
   margin-left: 10px;
@@ -164,8 +171,10 @@ padding-left: 0;
   text-align: left;
 }
 
-.about a {
-  color: #337ab7;
+.addon-org {
+   font-weight: bold;
+   color: #931985;
+
 }
 
 li {
@@ -312,4 +321,66 @@ float: right;
 .about-us {
   text-align: justify;
   font-size: 20px;
+}
+
+
+/*PLACEHOLDERS STYLING*/
+::-webkit-input-placeholder {
+   text-align: center;
+  vertical-align: middle;
+   font-weight: bold;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+     text-align: center;
+    vertical-align: middle;
+   font-weight: bold;
+}
+
+/*END PLACEHOLDERS STYLING*/
+
+#comment {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 3%;
+  overflow: auto;
+  height: auto;
+}
+
+
+.breadcrumb {
+  background: rgba(175, 245, 149, 0.59);
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:active, .multiselect-container .dropdown-menu .active, .dropdown-menu li a:checked,
+.dropdown-menu li a input:focus, .dropdown-menu li a:active:focus, .dropdown-menu li.active a label.checkbox  {
+  background: rgb(175, 245, 149);
+  color: #444;
+}
+
+p {
+  text-align: justify;
+}
+
+h1, h3 {
+    color: #7f0b73;
+    font-weight: bold;
+}
+
+[type="checkbox"]:checked + .checkbox:before,
+[type="checkbox"]:not(:checked) + .checkbox:after,
+[type="checkbox"]:checked + .checkbox:after,
+[type="checkbox"]:not(:checked) + .checkbox:after,
+[type="checkbox"]:checked + .checkbox:after {
+  background: #ff69e8;
+  border: 3px solid blue;
+}
+
+.about-us-header, .our-team-header {
+  margin-top: 3%
+}
+
+.pho_name a {
+    color: #740a69;
 }
