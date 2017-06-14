@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
-from .forms import RegistrationForm, UserForm
+from .forms import UserForm
 from .models import *
 
 def main_page(request): #

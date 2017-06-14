@@ -3,8 +3,10 @@ from django.contrib.auth.models import User
 
 
 class UserForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
-    confirm_password = forms.CharField(widget=forms.PasswordInput)
+    username = forms.CharField(label="Логін")
+    email = forms.EmailField(label="Електронна пошта")
+    password = forms.CharField(label="Пароль", widget=forms.PasswordInput)
+    confirm_password = forms.CharField(label="Повторіть пароль", widget=forms.PasswordInput)
 
     class Meta:
         model = User
@@ -19,13 +21,6 @@ class UserForm(forms.ModelForm):
             raise forms.ValidationError(
                 "password and confirm_password does not match"
             )
-
-
-class RegistrationForm(forms.Form):
-    email = forms.EmailField()
-    login = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
-    repeat_password = forms.CharField(widget=forms.PasswordInput)
 
 
 class LoginForm():
