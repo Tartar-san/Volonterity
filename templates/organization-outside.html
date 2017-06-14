@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{#..#}
 <head>
     {% block css %}
     <link href="{% static 'css/user_style.css' %}" rel="stylesheet">
@@ -41,7 +41,7 @@
                   <img id="user_photo" src="http://www.gravatar.com/avatar/4e258d4679ba777947ac73537effb1c3?s=47&d=http%3A%2F%2Fwww.techrepublic.com%2Fbundles%2Ftechrepubliccore%2Fimages%2Ficons%2Fstandard%2Ficon-user-default.png"/>
                 </div>
                 <div class="user like-share">
-                      <a class="btn btn-default like" role="button" href="organization_inside.html">Редагувати</a>
+                      <a class="btn btn-default like" role="button" href="/organization_inside/">Редагувати</a>
                 </div>
 
             </div>
@@ -75,13 +75,13 @@
                     <span class="input-group-addon addon-org">e-mail   </span>
                 <div class="form-control about" id="out_mail"><a href="https://mail.google.com">yaryna.korduba@gmail.com</a></div>
              </div>
-             <div class="input-group">
-               <span class="input-group-addon addon-org">Знайдіть нас</span>
-               <div class="form-control about">
-               <img class="logo soc-logo" src="static/fb_logo.png"/>
-               <img class="logo soc-logo" src="static/twit_logo.png"/>
-               <img class="logo soc-logo" src="static/insta_logo.png"/>
-             </div>
+{#             <div class="input-group">#}
+{#               <span class="input-group-addon addon-org">Знайдіть нас</span>#}
+{#               <div class="form-control about">#}
+{#               <img class="logo soc-logo" src="static/fb_logo.png"/>#}
+{#               <img class="logo soc-logo" src="static/twit_logo.png"/>#}
+{#               <img class="logo soc-logo" src="static/insta_logo.png"/>#}
+{#             </div>#}
               </ul>
 
             </div>

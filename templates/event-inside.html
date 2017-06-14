@@ -3,7 +3,6 @@
 
 <head>
     {% block css %}
-{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" type="text/css">
     <link href="{% static 'css/user_style.css' %}" rel="stylesheet">
@@ -33,7 +32,7 @@
             </div>
             <div class="col-lg-12">
                 <div class="form-group">
-  <textarea class="form-control" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>
+  <textarea class="form-control bordered-form" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>
 </div>
             </div>
 
@@ -52,7 +51,7 @@
                 </div>
                 <div class="user like-share">
 
-                    <a class="btn btn-default like" role="button" href="^event-outside/">Зберегти</a>
+                    <a class="btn btn-default like" role="button" href="/event_outside/">Зберегти</a>
                 </div>
 
             </div>
@@ -72,20 +71,20 @@
                     <div class="input-group">
             <span class="input-group-addon addon-org">Місто</span>
                 <div class="ui-widget">
-                  <input id="tags" class="form-control">
+                  <input id="tags" class="form-control bordered-form" placeholder="Додаткова інформація">
                 </div>
             </div>
                     <div class="input-group">
                         <span class="input-group-addon addon-org">Адреса</span>
-                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+                        <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon addon-org">Час</span>
-                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+                        <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon addon-org">Вид</span>
-                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+                        <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
                     </div>
 
                 </ul>
@@ -98,21 +97,21 @@
                 <ul>
                     <div class="input-group">
                         <span class="input-group-addon addon-org">Наш вебсайт</span>
-                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
                     </div>
 
                     <div class="input-group">
                         <span class="input-group-addon addon-org">e-mail</span>
-                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
                     </div>
 
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Знайдіть нас</span>
-                        <div class="form-control about">
-                            <img class="logo soc-logo" src="static/fb_logo.png"/>
-                            <img class="logo soc-logo" src="static/twit_logo.png"/>
-                            <img class="logo soc-logo" src="static/insta_logo.png"/>
-                        </div>
+{#                    <div class="input-group">#}
+{#                        <span class="input-group-addon addon-org">Знайдіть нас</span>#}
+{#                        <div class="form-control about">#}
+{#                            <img class="logo soc-logo" src="static/fb_logo.png"/>#}
+{#                            <img class="logo soc-logo" src="static/twit_logo.png"/>#}
+{#                            <img class="logo soc-logo" src="static/insta_logo.png"/>#}
+{#                        </div>#}
                 </ul>
 
             </div>
@@ -126,7 +125,7 @@
         <div class="col-lg-12">
  <div class="form-group">
 {# <span class="input-group-addon addon-org">Детальна інформація</span>#}
-  <textarea class="form-control" placeholder="Введіть детальну інформацію про подію" rows="5" id="comment"></textarea>
+  <textarea class="form-control bordered-form" placeholder="Введіть детальну інформацію про подію" rows="5" id="comment"></textarea>
 </div>
         </div>
         </div>

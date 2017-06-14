@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
+{#..#}
 <head>
     {% block css %}
     <link href="{%  static 'css/user_style.css' %}" rel="stylesheet">
@@ -31,7 +31,7 @@
         </div>
         <div class="col-lg-12">
                 <div class="form-group">
-  <textarea class="form-control" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>
+  <textarea class="form-control bordered-form" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>
 </div>
             </div>
   </div>
@@ -44,7 +44,7 @@
                 <div id="user_main_info" class="user">
                   <img id="user_photo" src="http://www.gravatar.com/avatar/4e258d4679ba777947ac73537effb1c3?s=47&d=http%3A%2F%2Fwww.techrepublic.com%2Fbundles%2Ftechrepubliccore%2Fimages%2Ficons%2Fstandard%2Ficon-user-default.png"/>
                   <div class="user like-share">
-                      <button class="btn btn-default like" role="button" href="organization_outside_my.html">Зберегти</button>
+                      <a class="btn btn-default like" role="button" href="/organization_outside/">Зберегти</a>
                 </div>
                 </div>
             </div>
@@ -64,12 +64,12 @@
             <div class="input-group">
             <span class="input-group-addon addon-org">Місто</span>
                 <div class="ui-widget">
-                  <input id="tags" class="form-control">
+                  <input id="tags" class="form-control bordered-form" placeholder="Додаткова інформація">
                 </div>
             </div>
             <div class="input-group">
             <span class="input-group-addon addon-org">Адреса</span>
-            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+            <input id="msg" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
             </div>
             </ul>
             </div>
@@ -79,11 +79,11 @@
 
             <div class="input-group">
             <span class="input-group-addon addon-org">Наш вебсайт</span>
-            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+            <input id="msg"  class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
             </div>
             <div class="input-group">
             <span class="input-group-addon addon-org">e-mail</span>
-            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+            <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
             </div>
             </ul>
             </div>
@@ -94,7 +94,7 @@
         <div class="col-lg-12">
  <div class="form-group">
 {# <span class="input-group-addon addon-org">Детальна інформація</span>#}
-  <textarea class="form-control" placeholder="Введіть детальну інформацію про подію" rows="5" id="comment"></textarea>
+  <textarea class="form-control bordered-form" placeholder="Введіть детальну інформацію про подію" rows="5" id="comment"></textarea>
 </div>
         </div>
         </div>
