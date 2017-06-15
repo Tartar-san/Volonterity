@@ -123,7 +123,7 @@ def create_event(request):
         form = Event(request.POST)
 
         if form.is_valid():
-            event = Event(creator=request.user)
+            event = Event(creator=request.user, )
             return redirect('/')
     else:
         form = EventForm()

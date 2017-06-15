@@ -37,5 +37,5 @@ urlpatterns = [
     url(r'^final_step/$', after_registration_view),
     url(r'^registration/$', user_registration),
     url(r'^create_event/$', create_event),
-    url(r'^confirm/(?P<string>[\w\-]+)/$', )
+    url(r'^confirm/(?P<string>[\w\-]+)/$', confirm_registration)
     ]
