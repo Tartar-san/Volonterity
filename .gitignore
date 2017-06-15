@@ -97,3 +97,4 @@ ENV/
 
 .idea/
 Volonterity/__pycache__/
+volonter/migrations

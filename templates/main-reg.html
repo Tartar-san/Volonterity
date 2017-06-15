@@ -61,63 +61,11 @@
                     </div>
                 </div>
 
-              <div class="row">
-                  <div class="col-md-8">
-                      <div class="col-10">
-
-
-                             <div class="form-group">
-                                <label for="example-text-input" class="col-2 col-form-label">Ім'я</label>
-                                    <input class="form-control" type="text" id="example-text-input" placeholder="Введіть ім'я" name="user"></input>
-                             </div>
-                             <div class="form-group">
-                                <label for="example-text-input" class="col-2 col-form-label">Прізвище</label>
-                                    <input class="form-control" type="text" id="example-text-input" placeholder="Введіть приізвище" name="surname"></input>
-                             </div>
-                             <div class="form-group">
-                          <label for="example-search-input" class="col-2 col-form-label">Логін</label>
-                              <input class="form-control" type="search" placeholder="Введіть логін" id="example-search-input" name="nickname" ng-model="nickname"></input>
-
-                            </div>
-                          <div class="form-group">
-                              <label for="example-email-input" class="col-2 col-form-label">Пошта</label>
-                              <input class="form-control" type="email" placeholder="myexample@example.com" id="example-email-input" name="email"></input>
-                          </div>
-                          <div class="form-group">
-                              <label for="example-password-input" class="col-2 col-form-label">Пароль</label>
-                              <input class="form-control" type="password" placeholder="Введіть пароль" id="example-password-input" name="password" ></input>
-
-                          </div>
-
-                          <div class="form-group">
-                             <label for="example-password-input" class="col-2 col-form-label">Повторіть пароль</label>
-                              <input class="form-control" type="password" placeholder="Введіть пароль" id="example-password-input" name="password_2" ng-model="password_2"></input>
-
-                          </div>
-
-                          <div class="form-group">
-                          <label for="exampleSelect1">Виберіть місто</label>
-                          <div class="ui-widget">
-                            <input id="tags" class="form-control">
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <div class="checkbox">
-                             <label>
-                             <input id="login-remember" type="checkbox" name="remember" value="1"> Запам'ятати мене
-                             </label>
-                            </div>
-                        </div>
-
-                            <div class="form-group">
-                            <button type="button" class="btn btn-success">Зареєструватись</button>
-                                                         </div>
-
-                           <hr>
-                            <label for="example-password-input" class="col-2 col-form-label">Якщо Ви вже маєте аккаунт <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">Увійти тут</a></label>
-                  </div>
-              </div>
+  <form method="post" action="/user_registration/">
+    {% csrf_token %}
+    {{ form.as_p }} 
+    <button type="submit">Зареєструватись</button>
+  </form>
         </div>
     </div>
 </div>
