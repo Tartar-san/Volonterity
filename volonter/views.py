@@ -1,4 +1,5 @@
-import _thread
+from threading import Thread
+from time import sleep
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from .forms import UserForm, EventForm
@@ -22,6 +23,7 @@ def confirmation_email(email, link):
               'на волонтерській платформі Ripka. \n' \
               'Для підтвердження реєстрації перейдіть за лінком: \n' + link
     send_mail(subject, message, ripka_email, [email], fail_silently=False)
+    sleep(1)
 
 def main_page(request): #
     events = Event.objects.all()
@@ -111,10 +113,10 @@ def user_registration(request):
 
         if form.is_valid():
             url = "127.0.0.1:8000/confirm/" + generate_random_string()
-            _thread.start_new_thread(confirmation_email(form.changed_data['email'], url))
+            thread = Thread(target=confirmation_email, args=(form.cleaned_data['email'], url))
+            thread.start()
+            thread.join()
             return redirect('/final_step')
-
-
     else:
         form = UserForm()
 
