@@ -132,6 +132,8 @@
 
  <div class="container">
 
+{% if number_of_posts > 0 %}
+
 
         <!-- This block of code will be filled by recurthion: 3 projects by one row - expectation: having 6 project (3 * 2) -->
         <div class="row">
@@ -146,10 +148,7 @@
             </div>
             </div>
 
-        {% for event in events %}
-     <h1>{{  event.title }}</h1>
-     {% endfor %}
-
+{% endif %}
 
 
 
