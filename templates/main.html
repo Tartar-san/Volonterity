@@ -132,6 +132,8 @@
 
  <div class="container">
 
+{% if number_of_posts > 0 %}
+
 
         <!-- This block of code will be filled by recurthion: 3 projects by one row - expectation: having 6 project (3 * 2) -->
         <div class="row">
@@ -140,16 +142,13 @@
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+                    <a href="portfolio-item.html">Львів без сміття!</a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                <p>Друзі, вітаємо! Наша організація хоче започаткувати  громадську ініціативу щодо сміття у Львові. Долучайтесь до нас, якщо Вам теж не байдужий вигляд нашого міста!</p>
             </div>
             </div>
 
-        {% for event in events %}
-     <h1>{{  event.title }}</h1>
-     {% endfor %}
-
+{% endif %}
 
 
 

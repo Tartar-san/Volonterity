@@ -115,7 +115,6 @@ def user_registration(request):
             url = "127.0.0.1:8000/confirm/" + generate_random_string()
             thread = Thread(target=confirmation_email, args=(form.cleaned_data['email'], url))
             thread.start()
-            thread.join()
             return redirect('/final_step')
     else:
         form = UserForm()
