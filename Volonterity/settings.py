@@ -31,7 +31,7 @@ SECRET_KEY = '-nj-wd39mbli##3ix8vp7=lzeji(a*vq++d*7d9tfdbtw*yrlg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.128.98']
 
 
 # Application definition
