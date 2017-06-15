@@ -22,10 +22,11 @@ def confirmation_email(email, link):
     send_mail(subject, message, ripka_email, [email], fail_silently=False)
 
 def main_page(request): #
+    events = Event.objects.all()
     if (request.user.is_authenticated):
-        return render(request, 'main.html', context={'logged_in': True})
+        return render(request, 'main.html', context={'logged_in': True, 'events': events})
     else:
-        return render(request, 'main.html', context={'logged_in': False})
+        return render(request, 'main.html', context={'logged_in': False, 'events': events})
 
 
 def organization_inside(request):
@@ -108,7 +109,7 @@ def user_registration(request):
 
         if form.is_valid():
             url = "127.0.0.1:8000/confirm/" + generate_random_string()
-            send_mail(form.email, url)
+            confirmation_email(form.cleaned_data['email'], url)
 
             return redirect('/final_step')
 
@@ -120,10 +121,13 @@ def user_registration(request):
 
 def create_event(request):
     if (request.method == 'POST'):
-        form = Event(request.POST)
+        form = EventForm(request.POST)
 
         if form.is_valid():
-            event = Event(creator=request.user, )
+            event = Event(creator=request.user, title=form.title, city=form.city, event_type=form.event_type)
+            event.save()
+            event_img = EventImages(event=event, image=form.image, short_description="lol")
+            event_img.save()
             return redirect('/')
     else:
         form = EventForm()

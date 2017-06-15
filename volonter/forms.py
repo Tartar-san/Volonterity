@@ -19,11 +19,20 @@ class UserForm(forms.Form):
             )
 
 
+EVENT_TYPE_CHOICES = (
+    ('FR', 'Прибирання'),
+    ('SO', 'Садівництво'),
+)
+
 class EventForm(forms.Form):
     name = forms.CharField(label="Назва події", max_length=100)
     description = forms.CharField(label="Опис події")
     contacts = forms.CharField(label="Контакти")
+    city = forms.CharField(label="Місто")
+
+    event_type = forms.ChoiceField(label="Тип події", choices=EVENT_TYPE_CHOICES)
     image = forms.ImageField(label="Картинка для привернення уваги")
+
 
 
 class OrganizationForm():
