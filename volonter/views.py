@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from .forms import UserForm, EventForm
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import *
 
 def main_page(request): #
@@ -124,3 +126,11 @@ def custom404_view(request):
 
 def after_registration_view(request):
     return render(request, 'check_email_after_registration.html', context={'logged_in': False})
+
+def confirmation_email(email, link):
+    ripka_email = settings.EMAIL_HOST_USER
+    subject = 'Підтвердження реєстрації'
+    message = 'Ви отримали цей лист, тому що на ваш емейл було зареєстровано користувача' \
+              'на волонтерській платформі Ripka. \n' \
+              'Для підтвердження реєстрації перейдіть за лінком: \n' + link
+    send_mail(subject, message, ripka_email, [email], fail_silently=False)
