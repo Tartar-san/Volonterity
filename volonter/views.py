@@ -1,4 +1,4 @@
-import thread
+import _thread
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from .forms import UserForm, EventForm
@@ -110,7 +110,7 @@ def user_registration(request):
 
         if form.is_valid():
             url = "127.0.0.1:8000/confirm/" + generate_random_string()
-            thread.start_new_thread(confirmation_email(form.changed_data['email'], url))
+            _thread.start_new_thread(confirmation_email(form.changed_data['email'], url))
             return redirect('/final_step')
 
 
