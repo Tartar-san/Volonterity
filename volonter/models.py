@@ -22,9 +22,15 @@ class ActivityTypes(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     city = models.ForeignKey(Cities)
+    #activated = models.BooleanField(default=False)
 
     def __str__(self):
         return "Profile of %s" % str(self.user)
+
+
+#class ConfirmationLinks(models.Model):
+#    user = models.OneToOneField(User)
+#    url = models.CharField(max_length=20)
 
 
 class Organization(models.Model):

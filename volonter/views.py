@@ -5,6 +5,22 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .models import *
 
+import random
+import string
+
+def generate_random_string(chars=string.ascii_uppercase +
+                                                  string.ascii_lowercase + string.digits):
+    size = random.randint(10, 12)
+    return ''.join(random.choice(chars) for _ in range(size))
+
+def confirmation_email(email, link):
+    ripka_email = settings.EMAIL_HOST_USER
+    subject = 'Підтвердження реєстрації'
+    message = 'Ви отримали цей лист, тому що на ваш емейл було зареєстровано користувача' \
+              'на волонтерській платформі Ripka. \n' \
+              'Для підтвердження реєстрації перейдіть за лінком: \n' + link
+    send_mail(subject, message, ripka_email, [email], fail_silently=False)
+
 def main_page(request): #
     if (request.user.is_authenticated):
         return render(request, 'main.html', context={'logged_in': True})
@@ -91,9 +107,10 @@ def user_registration(request):
         form = UserForm(request.POST)
 
         if form.is_valid():
+            url = "127.0.0.1:8000/confirm/" + generate_random_string()
+            send_mail(form.email, url)
 
-
-            return redirect('/')
+            return redirect('/final_step')
 
 
     else:
@@ -106,7 +123,7 @@ def create_event(request):
         form = Event(request.POST)
 
         if form.is_valid():
-
+            event = Event(creator=request.user)
             return redirect('/')
     else:
         form = EventForm()
@@ -116,10 +133,6 @@ def create_event(request):
 def create_organization(request):
     return redirect('/not_available')
 
-def registration_confirmation(request):
-#    user = UserProfile.objects.get(confirmation_url = url)
-#    user.confirmed = True
-    pass
 
 def custom404_view(request):
     return render(request, '404page.html')
@@ -127,10 +140,7 @@ def custom404_view(request):
 def after_registration_view(request):
     return render(request, 'check_email_after_registration.html', context={'logged_in': False})
 
-def confirmation_email(email, link):
-    ripka_email = settings.EMAIL_HOST_USER
-    subject = 'Підтвердження реєстрації'
-    message = 'Ви отримали цей лист, тому що на ваш емейл було зареєстровано користувача' \
-              'на волонтерській платформі Ripka. \n' \
-              'Для підтвердження реєстрації перейдіть за лінком: \n' + link
-    send_mail(subject, message, ripka_email, [email], fail_silently=False)
+def confirm_registration(request, link):
+    return render(request, 'registration_confirmed.html', context={'logged_in': False})
+
+
