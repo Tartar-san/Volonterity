@@ -1,0 +1,41 @@
+.big-div {
+    background-color: #9923a9;
+}
+.last_step {
+    color: #fff8f9;
+    margin-left: 41.5%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    font-family: "Trebuchet MS", serif;
+}
+.last_step1 {
+    color: #fff8f9;
+    margin-left: 28%;
+    margin-top: 1%;
+    font-family: "Trebuchet MS", serif;
+}
+.kaef {
+    margin-left: 83.6%;
+    margin-top: -16.3%;
+}
+.main {
+    width: 60%;
+    height: 250px;
+    margin-top: 3%;
+}
+.my {
+    margin-left: -2%;
+    font-size: 250%;
+    font-family: "Trebuchet MS", cursive;
+}
+.my1 {
+    font-family: "Trebuchet MS", cursive;
+    margin-left: 5%;
+}
+.last {
+    margin-top: 3%;
+    background-color: #9923a9;
+    /*width: 100%;*/
+    height: 10%;
+    margin-bottom: -5.5%;
+}
