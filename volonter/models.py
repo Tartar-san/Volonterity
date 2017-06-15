@@ -66,14 +66,14 @@ class OrganizationImages(models.Model):
 
 class Event(models.Model):
     creator = models.ForeignKey(User)
-    organization = models.ForeignKey(Organization, blank=True)
+    organization = models.ForeignKey(Organization, blank=True, null=True)
     event_types = (
         ("A", "Test A"),
         ("B", "Test B"),
     )
-    title = models.CharField(max_length=100)
-    city = models.ForeignKey(Cities, db_index=True)
-    event_type = models.CharField(max_length=100, choices=event_types, db_index=True)
+    title = models.CharField(max_length=100, null=True)
+    city = models.ForeignKey(Cities, db_index=True, null=True)
+    event_type = models.CharField(max_length=100, choices=event_types, db_index=True, null=True)
     activity_types = models.ManyToManyField(ActivityTypes)
 
     def __str__(self):

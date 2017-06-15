@@ -31,7 +31,7 @@ class EventForm(forms.Form):
     city = forms.CharField(label="Місто")
 
     event_type = forms.ChoiceField(label="Тип події", choices=EVENT_TYPE_CHOICES)
-    image = forms.ImageField(label="Картинка для привернення уваги")
+    image = forms.FileField(label="Картинка для привернення уваги", required=False)
 
 
 

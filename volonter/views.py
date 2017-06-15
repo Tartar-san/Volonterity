@@ -9,6 +9,7 @@ from .models import *
 import random
 import string
 
+
 def generate_random_string(chars=string.ascii_uppercase +
                                                   string.ascii_lowercase + string.digits):
     size = random.randint(10, 12)
@@ -25,9 +26,9 @@ def confirmation_email(email, link):
 def main_page(request): #
     events = Event.objects.all()
     if (request.user.is_authenticated):
-        return render(request, 'main.html', context={'logged_in': True, 'events': events})
+        return render(request, 'main.html', context={'logged_in': True, 'events': events, 'number_of_posts': settings.SOME_POST})
     else:
-        return render(request, 'main.html', context={'logged_in': False, 'events': events})
+        return render(request, 'main.html', context={'logged_in': False, 'events': events, 'number_of_posts': settings.SOME_POST})
 
 
 def organization_inside(request):
@@ -124,10 +125,11 @@ def create_event(request):
         form = EventForm(request.POST)
 
         if form.is_valid():
-            event = Event(creator=request.user, title=form.title, city=form.city, event_type=form.event_type)
-            event.save()
-            event_img = EventImages(event=event, image=form.image, short_description="lol")
-            event_img.save()
+            settings.SOME_POST += 1
+            #event = Event(creator=request.user)
+            #event.save()
+            #event_img = EventImages(event=event, image=form.image, short_description="lol")
+            #event_img.save()
             return redirect('/')
     else:
         form = EventForm()
