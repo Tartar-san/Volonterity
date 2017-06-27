@@ -49,8 +49,8 @@ body {
   border-color: transparent !important;
 }
 
-.panel-body {
-    height: 134px;
+.panel-body p {
+    text-align: justify;
 }
 
 .panel .panel-heading {
