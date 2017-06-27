@@ -22,15 +22,15 @@ class ActivityTypes(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     city = models.ForeignKey(Cities)
-    #activated = models.BooleanField(default=False)
+    activated = models.BooleanField(default=False)
 
     def __str__(self):
         return "Profile of %s" % str(self.user)
 
 
-#class ConfirmationLinks(models.Model):
-#    user = models.OneToOneField(User)
-#    url = models.CharField(max_length=20)
+class ConfirmationLinks(models.Model):
+    user = models.OneToOneField(User)
+    string = models.CharField(max_length=20, primary_key=True)
 
 
 class Organization(models.Model):
@@ -98,6 +98,7 @@ class EventTimes(models.Model):
 class EventImages(models.Model):
     event = models.ForeignKey(Event)
     image = models.ImageField()
+    name = models.CharField(max_length=60)
     short_description = models.CharField(max_length=300)
 
     def __str__(self):
