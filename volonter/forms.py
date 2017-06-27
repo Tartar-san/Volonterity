@@ -2,11 +2,18 @@ from django import forms
 from django.contrib.auth.models import User
 
 
+CITY_CHOICES = {
+    ('Lviv', 'Lviv'),
+    ('Kyiv', 'Kyiv'),
+}
+
 class UserForm(forms.Form):
     username = forms.CharField(label="Логін")
     email = forms.EmailField(label="Електронна пошта")
+    city = forms.ChoiceField(label="Місто", choices=CITY_CHOICES)
     password = forms.CharField(label="Пароль", widget=forms.PasswordInput)
     confirm_password = forms.CharField(label="Повторіть пароль", widget=forms.PasswordInput)
+
 
     def clean(self):
         cleaned_data = super(UserForm, self).clean()
@@ -22,6 +29,7 @@ class UserForm(forms.Form):
 EVENT_TYPE_CHOICES = (
     ('FR', 'Прибирання'),
     ('SO', 'Садівництво'),
+    ('AS', 'Будівництво')
 )
 
 class EventForm(forms.Form):
@@ -29,8 +37,10 @@ class EventForm(forms.Form):
     description = forms.CharField(label="Опис події")
     contacts = forms.CharField(label="Контакти")
     city = forms.CharField(label="Місто")
+    adress = forms.CharField(label="Адреса")
+    time = forms.CharField(label="Час")
+    spheres = forms.ChoiceField(label="Сфери", choices=EVENT_TYPE_CHOICES)
 
-    event_type = forms.ChoiceField(label="Тип події", choices=EVENT_TYPE_CHOICES)
     image = forms.FileField(label="Картинка для привернення уваги", required=False)
 
 

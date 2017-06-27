@@ -37,21 +37,21 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('http://lasallechurch.org/wp-content/uploads/2015/01/banner-getinvolved.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
-            </div>
-            <div class="item">
                 <div class="fill" style="background-image:url('https://www.crucial.com.au/wp-content/uploads/2014/10/ccwrapper.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                    <h2></h2>
                 </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('http://chakrasuria.com.my/landing/wp-content/uploads/2016/12/2.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url(/static/static/helping-climb.jpg);"></div>
+                <div class="carousel-caption">
+                    <h2></h2>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">
+                <h1 class="page-header" style="font-family: 'Trebuchet MS',serif">
                     Робити добро - просто і легко
                 </h1>
             </div>
@@ -81,7 +81,8 @@
                         <h4><i class="glyphicon glyphicon-home"></i> Додати організацію</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Після реєстрації у Вас з'являється можливість створити власну організацію для проведення подій для волонтерів.</p>
+                        <p>Після реєстрації у Вас з'являється можливість створити власну організацію, після цього ви можете
+                            створювати події для волонтерів вже не від імені звичайного користувача, а від організації.</p>
                         <a href="/registration" class="btn btn-default" id="panel-btn">Долучитися</a>
                     </div>
                 </div>
@@ -102,10 +103,10 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="glyphicon glyphicon-user"></i> Зареєструватися</h4>
+                        <h4><i class="glyphicon glyphicon-user"></i>Зареєструватися</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Якщо ви хочете отримати нові досвід, звання і враження - потрібно зареєструватись, щоб мати змогу долучитись до волонтерства.</p>
+                        <p>Ви можете стати частиною спільноти волонтерів, які не жаліють своїх сил та часу на допомогу іншим людям. Потрібно лише зареєструватись.</p>
                         <a href="user-reg.html" class="btn btn-default">Долучитися</a>
                     </div>
                 </div>
@@ -124,7 +125,7 @@
             </div>
         </div>
 
-
+        <hr>
 
 
         </div>
@@ -132,23 +133,24 @@
 
  <div class="container">
 
-{% if number_of_posts > 0 %}
+{% if events %}
 
-
+{% for event in events %}
         <!-- This block of code will be filled by recurthion: 3 projects by one row - expectation: having 6 project (3 * 2) -->
-        <div class="row">
+       <!--- <div class="row">
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
+                <a href="/event_inside">
                     <img class="img-responsive img-hover" src="/static/static/New_treehouse.png" alt="">
                 </a>
                 <h3>
-                    <a href="portfolio-item.html" style="font-family: 'Trebuchet MS',fantasy">Будиночок на дереві</a>
+                    <a href="/event_inside" style="font-family: 'Trebuchet MS',fantasy">Будиночок на дереві</a>
                 </h3>
-                <p style="font-family: 'Trebuchet MS',cursive">Запрошуємо усіх приєднатись до будівництва прекрасного будиночку на дереві, де наші дітки могли б весело проводити час разом. </p>
-                <h4 style="margin-left: 50%; font-style: italic; font-family: 'Trebuchet MS',cursive">З повагою, Гомер.</h4>
+                <p style="font-family: 'Trebuchet MS',cursive">Запрошуємо усіх приєднатись до будівництва прекрасного будиночку на дереві, де діти могли б спілкуватись між собою та весело проводити час.</p>
+                <h4 style="margin-left: 50%; font-style: italic; font-family: 'Trebuchet MS',cursive">З повагою, Барт.</h4>
             </div>
-            </div>
-
+            </div> !-->
+    <li>{{  event.title  }}</li>
+{% endfor %}
 {% endif %}
 
 
