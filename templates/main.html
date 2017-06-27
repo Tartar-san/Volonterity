@@ -4,7 +4,7 @@
 <head>
 {#css starts#}
     {% block css %}
-{#    <link href={% static "css/custom.css" %} rel="stylesheet">#}
+    <link href={% static "css/custom.css" %} rel="stylesheet">
 {#    <link href={% static "css/main-style.css" %} rel="stylesheet">#}
 
 {#      <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">#}
@@ -13,12 +13,13 @@
 {#css ends#}
     {% block js %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="bootstrap-dropselect.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script type="text/javascript" src="{%  static 'js/bootstrap-filestyle.min.js' %}"> </script>
-{#        <script type="text/javascript" src="{% static 'js/tether.min.js' %}"></script>#}
-{#        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>#}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+    <script src="{% static 'js/bootstrap-dropselect.js' %}"></script>
+{#    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>#}
+{#    <script type="text/javascript" src="{%  static 'js/bootstrap-filestyle.min.js' %}"> </script>#}
+
+
+
 {#.....#}
 
     {% endblock %}
@@ -94,7 +95,7 @@
                     </div>
                     <div class="panel-body">
                         <p>Тут ви знайдете події, які можуть вам сподобатися. Обирайте найцікавіше, користуючись кастомізованим пошуком </p>
-                        <a href="user-reg.html" class="btn btn-default">Долучитися</a>
+                        <a href="/registration" class="btn btn-default">Долучитися</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                         <h4><i class="glyphicon glyphicon-user"></i>Зареєструватися</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Вам потрібно зареєструватись, щоб мати змогу долучитись до волонтерства.</p>
+                        <p>Тут ви знайдете події, які можуть вам сподобатися. Обирайте найцікавіше, користуючись кастомізованим пошуком </p>
                         <a href="user-reg.html" class="btn btn-default">Долучитися</a>
                     </div>
                 </div>
