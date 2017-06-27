@@ -6,6 +6,7 @@ from .forms import UserForm, EventForm
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import *
+from django.contrib.auth import login
 
 import random
 import string
@@ -28,9 +29,9 @@ def confirmation_email(email, link):
 def main_page(request): #
     events = Event.objects.all()
     if (request.user.is_authenticated):
-        return render(request, 'main.html', context={'logged_in': True, 'events': events, 'number_of_posts': settings.SOME_POST})
+        return render(request, 'main.html', context={'logged_in': True, 'events': events})
     else:
-        return render(request, 'main.html', context={'logged_in': False, 'events': events, 'number_of_posts': settings.SOME_POST})
+        return render(request, 'main.html', context={'logged_in': False, 'events': events})
 
 
 def organization_inside(request):
@@ -112,9 +113,27 @@ def user_registration(request):
         form = UserForm(request.POST)
 
         if form.is_valid():
-            url = "127.0.0.1:8000/confirm/" + generate_random_string()
+            confirmation_string = generate_random_string()
+            while ConfirmationLinks.objects.filter(string=confirmation_string).count() > 0:
+                confirmation_string = generate_random_string()
+            url = "127.0.0.1:8000/confirm/" + confirmation_string
             thread = Thread(target=confirmation_email, args=(form.cleaned_data['email'], url))
             thread.start()
+            user = User(email=form.cleaned_data['email'],
+                        username=form.cleaned_data['username'],
+                        password=form.cleaned_data['password']
+                        )
+            user.save()
+            city = Cities.objects.filter(city=form.cleaned_data['city'])
+            if city.count() == 0:
+                city = Cities(city=form.cleaned_data['city'])
+                city.save()
+            else:
+                city.get()
+            user_profile = UserProfile(user=user, city=city)
+            user_profile.save()
+            confirmation_string = ConfirmationLinks(user=user, string=confirmation_string)
+            confirmation_string.save()
             return redirect('/final_step')
     else:
         form = UserForm()
@@ -126,11 +145,10 @@ def create_event(request):
         form = EventForm(request.POST)
 
         if form.is_valid():
-            settings.SOME_POST += 1
-            #event = Event(creator=request.user)
-            #event.save()
-            #event_img = EventImages(event=event, image=form.image, short_description="lol")
-            #event_img.save()
+            event = Event(creator=request.user)
+            event.save()
+            event_img = EventImages(event=event, image=form.image, short_description="lol")
+            event_img.save()
             return redirect('/')
     else:
         form = EventForm()
@@ -148,6 +166,16 @@ def after_registration_view(request):
     return render(request, 'check_email_after_registration.html', context={'logged_in': False})
 
 def confirm_registration(request, string):
-    return render(request, 'registration_confirmed.html', context={'logged_in': False})
+    try:
+        confirmation_link = ConfirmationLinks.objects.get(string=string)
+        user = confirmation_link.user
+        user_profile = UserProfile.objects.get(user=user)
+        user_profile.activated = True
+        user_profile.save()
+        login(request, user)
+    except TypeError:
+        return redirect('/not_available')
+
+    return redirect('/')
 
 

@@ -2,11 +2,18 @@ from django import forms
 from django.contrib.auth.models import User
 
 
+CITY_CHOICES = {
+    ('Lviv', 'Lviv'),
+    ('Kyiv', 'Kyiv'),
+}
+
 class UserForm(forms.Form):
     username = forms.CharField(label="Логін")
     email = forms.EmailField(label="Електронна пошта")
+    city = forms.ChoiceField(label="Місто", choices=CITY_CHOICES)
     password = forms.CharField(label="Пароль", widget=forms.PasswordInput)
     confirm_password = forms.CharField(label="Повторіть пароль", widget=forms.PasswordInput)
+
 
     def clean(self):
         cleaned_data = super(UserForm, self).clean()

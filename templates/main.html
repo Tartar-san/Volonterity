@@ -132,11 +132,11 @@
 
  <div class="container">
 
-{% if number_of_posts > 0 %}
+{% if events %}
 
-
+{% for event in events %}
         <!-- This block of code will be filled by recurthion: 3 projects by one row - expectation: having 6 project (3 * 2) -->
-        <div class="row">
+       <!--- <div class="row">
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
                     <img class="img-responsive img-hover" src="/static/static/New_treehouse.png" alt="">
@@ -147,8 +147,9 @@
                 <p style="font-family: 'Trebuchet MS',cursive">Запрошуємо усіх приєднатись до будівництва прекрасного будиночку на дереві, де наші дітки могли б весело проводити час разом. </p>
                 <h4 style="margin-left: 50%; font-style: italic; font-family: 'Trebuchet MS',cursive">З повагою, Гомер.</h4>
             </div>
-            </div>
-
+            </div> !-->
+    <li>{{  event.title  }}</li>
+{% endfor %}
 {% endif %}
 
 
