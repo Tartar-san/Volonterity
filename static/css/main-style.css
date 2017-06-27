@@ -1,3 +1,8 @@
+body {
+  /**/
+  margin-top: 2%;
+}
+
 .img-hover {
     width:360px;
     height:360px;
@@ -44,7 +49,9 @@
   border-color: transparent !important;
 }
 
-
+.panel-body p {
+    text-align: justify;
+}
 
 .panel .panel-heading {
   color: white;
@@ -53,6 +60,10 @@
 
 .about a {
   /*background-color: #933a85;*/
+}
+
+.panel-body .btn-default {
+    vertical-align: bottom;
 }
 
 .btn-default {
@@ -73,7 +84,7 @@
 
 
 #myCarousel {
-  margin-top: 4%;
+  margin-top: 1.5%;
   height:70%;
   padding: 0;
   /*height: 100%;*/
@@ -135,5 +146,24 @@
 }
 /*end footer styling*/
 
+/*start login styling*/
+
+.form-signin p {
+    /*margin: 0;*/
+    padding-left: 13.3%;
+    padding-right: 13.3%;
+
+}
+
+#login {
+    margin-left: 13.3%;
+    margin-right: 13.3%;
+
+
+}
+
+#content-log {
+}
+/*end login styling*/
 
 /*end main colorful style*/

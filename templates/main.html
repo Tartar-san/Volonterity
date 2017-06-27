@@ -4,7 +4,7 @@
 <head>
 {#css starts#}
     {% block css %}
-{#    <link href={% static "css/custom.css" %} rel="stylesheet">#}
+    <link href={% static "css/custom.css" %} rel="stylesheet">
 {#    <link href={% static "css/main-style.css" %} rel="stylesheet">#}
 
 {#      <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">#}
@@ -13,12 +13,13 @@
 {#css ends#}
     {% block js %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="bootstrap-dropselect.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script type="text/javascript" src="{%  static 'js/bootstrap-filestyle.min.js' %}"> </script>
-{#        <script type="text/javascript" src="{% static 'js/tether.min.js' %}"></script>#}
-{#        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>#}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+    <script src="{% static 'js/bootstrap-dropselect.js' %}"></script>
+{#    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>#}
+{#    <script type="text/javascript" src="{%  static 'js/bootstrap-filestyle.min.js' %}"> </script>#}
+
+
+
 {#.....#}
 
     {% endblock %}
@@ -43,7 +44,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://chakrasuria.com.my/landing/wp-content/uploads/2016/12/2.jpg');"></div>
+                <div class="fill" style="background-image:url('https://www.crucial.com.au/wp-content/uploads/2014/10/ccwrapper.jpg');"></div>
                 <div class="carousel-caption">
                     <h2></h2>
                 </div>
@@ -81,8 +82,8 @@
                         <h4><i class="glyphicon glyphicon-home"></i> Додати організацію</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Після реєстрації у Вас з'являється можливість створити власну організацію, після цього ви можете
-                            створювати події для волонтерів вже не від імені звичайного користувача, а від організації.</p>
+                        <p>Після реєстрації у Вас з'являється можливість створити власну організацію для проведення подій для волонтерів. Знаходьте однодумців, творіть нові ідеї та прямуйте до кращих змін разом!</p>
+
                         <a href="/registration" class="btn btn-default" id="panel-btn">Долучитися</a>
                     </div>
                 </div>
@@ -94,8 +95,8 @@
                         <h4><i class="glyphicon glyphicon-user"></i>Знайти цікаву подію</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Тут ви знайдете події, які можуть вам сподобатися. Обирайте найцікавіше, користуючись кастомізованим пошуком </p>
-                        <a href="user-reg.html" class="btn btn-default">Долучитися</a>
+                        <p>Тут ви знайдете події, які можуть вам сподобатися. Обирайте найцікавіші пропозиції, долучайтеся до нових ініціатив та робіть перші кроки до змін, користуючись зручним кастомізованим пошуком. </p>
+                        <a href="/registration" class="btn btn-default">Долучитися</a>
                     </div>
                 </div>
             </div>
@@ -118,7 +119,7 @@
                         <h4><i class="glyphicon glyphicon-volume-up"></i> Створити Подію</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Після реєстрації ви маєте змогу самостійно створювати події. Знаходьте людей, що підтримають вашу ініціативу та створюйте нові можливості для себе і оточуючих.Вам обов'язково продобається!</p>
+                        <p>Після реєстрації ви маєте змогу самостійно створювати події. Знаходьте людей, що підтримають вашу ініціативу та створюйте нові можливості для себе і оточуючих.Вам обов'язково сподобається!</p>
                         <a href="listing-reg.html" class="btn btn-default">Долучитися</a>
                     </div>
                 </div>
