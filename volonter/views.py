@@ -13,9 +13,10 @@ import string
 
 
 def generate_random_string(chars=string.ascii_uppercase +
-                                                  string.ascii_lowercase + string.digits):
+                                 string.ascii_lowercase + string.digits):
     size = random.randint(10, 12)
     return ''.join(random.choice(chars) for _ in range(size))
+
 
 def confirmation_email(email, link):
     ripka_email = settings.EMAIL_HOST_USER
@@ -26,7 +27,8 @@ def confirmation_email(email, link):
     send_mail(subject, message, ripka_email, [email], fail_silently=False)
     sleep(1)
 
-def main_page(request): #
+
+def main_page(request):  #
     events = Event.objects.all()
     if (request.user.is_authenticated):
         return render(request, 'main.html', context={'logged_in': True, 'events': events})
@@ -96,6 +98,7 @@ def user_outside(request):
     else:
         return render(request, 'user-outside.html', context={'logged_in': False})
 
+
 def about_us(request):
     if (request.user.is_authenticated):
         return render(request, 'about-us.html', context={'logged_in': True})
@@ -140,6 +143,7 @@ def user_registration(request):
 
     return render(request, 'user_registration.html', context={"logged_in": False, "form": form})
 
+
 def create_event(request):
     if (request.method == 'POST'):
         form = EventForm(request.POST)
@@ -155,6 +159,7 @@ def create_event(request):
 
     return render(request, 'create_event.html', context={"logged_in": True, "form": form})
 
+
 def create_organization(request):
     return redirect('/not_available')
 
@@ -162,8 +167,10 @@ def create_organization(request):
 def custom404_view(request):
     return render(request, '404page.html')
 
+
 def after_registration_view(request):
     return render(request, 'check_email_after_registration.html', context={'logged_in': False})
+
 
 def confirm_registration(request, string):
     try:
@@ -177,5 +184,3 @@ def confirm_registration(request, string):
         return redirect('/not_available')
 
     return redirect('/')
-
-
