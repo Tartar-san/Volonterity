@@ -7,7 +7,7 @@
           allSelectedText: 'Все',
           nonSelectedText: 'Оберіть інтереси',
       });
-     $('.input-group .btn-default').css('background', '#c6f5d3').css('color', '#777');
+     $('.input-group .btn-default').css('background', '#rgba(130, 200, 90, 0.8)').css('color', '#555');
 
      $('.input-group .btn-default .multiselect-selected-text').css('padding-left', '15%');
 

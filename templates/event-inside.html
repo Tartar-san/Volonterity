@@ -30,105 +30,120 @@
             <div class="col-lg-12">
                 <h1 class="page-header">Старший брат</h1>
             </div>
-            <div class="col-lg-12">
-                <div class="form-group">
-  <textarea class="form-control bordered-form" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>
-</div>
-            </div>
-
+{#            <div class="col-lg-12">#}
+{#                <div class="form-group">#}
+{#  <textarea class="form-control bordered-form" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>#}
+{#</div>#}
         </div>
 
 
         <!-- /.row -->
 
         <!-- Portfolio Item Row -->
-        <div class="row user_main">
-
-            <div class="col-md-3">
-                <div id="user_main_info" class="user">
-                    <img id="user_photo"
-src="http://www.gravatar.com/avatar/4e258d4679ba777947ac73537effb1c3?s=47&d=http%3A%2F%2Fwww.techrepublic.com%2Fbundles%2Ftechrepubliccore%2Fimages%2Ficons%2Fstandard%2Ficon-user-default.png"/>                </div>
-                <div class="user like-share">
-
-                    <a class="btn btn-default like" role="button" href="/event_outside/">Зберегти</a>
+{#        <div class="row user_main">#}
+{#        my new code#}
+        <div class="row">
+            <div class="container-fluid">
+                <div class="col-lg-3 sidenav">
+{#            <div class="col-md-3">#}
+                    <div id="user_main_info" class="user">
+                        <img id="user_photo" src=/static/static/bart_tree.jpg>
+                    </div>
+                    <div class="user like-share">
+                        <a class="btn btn-default like" role="button" href="/event_outside/">Зберегти</a>
+                    </div>
                 </div>
+{#                two divs#}
+                <div class="col-lg-8">
 
-            </div>
-
-            <div class="col-md-4" id="user_info_box">
-                <h3>Про подію</h3>
-                <ul>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Сфери</span>
-                        <select id="multiselect" multiple="multiple" style="width: 100% !important;">
-                            <option value="1">Довкілля</option>
-                            <option value="2">Діти</option>
-                            <option value="3">Літні люди</option>
-                            <option value="4">Армія</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-            <span class="input-group-addon addon-org">Місто</span>
-                <div class="ui-widget">
-                  <input id="tags" class="form-control bordered-form" placeholder="Додаткова інформація">
-                </div>
-            </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Адреса</span>
-                        <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Час</span>
-                        <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Вид</span>
-                        <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
-                    </div>
+                    <div clas="row">
+                        <div class="col-md-6" id="user_info_box_2">
+                            <h3>Про подію</h3>
+                            <ul>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-org">Сфери</span>
+                                    <select id="multiselect" multiple="multiple" style="width: 100% !important;">
+                                        <option value="1">Довкілля</option>
+                                        <option value="2">Діти</option>
+                                        <option value="3">Літні люди</option>
+                                        <option value="4">Армія</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                <span class="input-group-addon addon-org">Місто</span>
+                                    <div class="ui-widget">
+                                      <input id="tags" class="form-control bordered-form" placeholder="Додаткова інформація">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-org">Адреса</span>
+                                    <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-org">Час</span>
+                                    <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-org">Вид</span>
+                                    <input id="msg" type="text" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
+                                </div>
 
                 </ul>
             </div>
+                    </div>
 
             <!-- права колонка -->
+                    <div class="row">
+                        <div class="col-md-6" id="user_info_box_2">
+                            <h3>Контактна інформація</h3>
+                                <ul>
+                            <div class="input-group">
+                                <span class="input-group-addon addon-org">Наш вебсайт</span>
+                                <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
+                            </div>
 
-            <div class="col-md-4" id="user_info_box_2">
-                <h3>Контактна інформація</h3>
-                <ul>
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">Наш вебсайт</span>
-                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
-                    </div>
+                            <div class="input-group">
+                                <span class="input-group-addon addon-org">e-mail</span>
+                                <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
+                            </div>
 
-                    <div class="input-group">
-                        <span class="input-group-addon addon-org">e-mail</span>
-                        <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
-                    </div>
-
-{#                    <div class="input-group">#}
-{#                        <span class="input-group-addon addon-org">Знайдіть нас</span>#}
-{#                        <div class="form-control about">#}
-{#                            <img class="logo soc-logo" src="static/fb_logo.png"/>#}
-{#                            <img class="logo soc-logo" src="static/twit_logo.png"/>#}
-{#                            <img class="logo soc-logo" src="static/insta_logo.png"/>#}
-{#                        </div>#}
-                </ul>
+        {#                    <div class="input-group">#}
+        {#                        <span class="input-group-addon addon-org">Знайдіть нас</span>#}
+        {#                        <div class="form-control about">#}
+        {#                            <img class="logo soc-logo" src="static/fb_logo.png"/>#}
+        {#                            <img class="logo soc-logo" src="static/twit_logo.png"/>#}
+        {#                            <img class="logo soc-logo" src="static/insta_logo.png"/>#}
+        {#                        </div>#}
+                        </ul>
 
             </div>
 
         </div>
+
         <!-- /.row -->
 
         <hr id="user_hr">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <textarea class="form-control bordered-form" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
 
         <div class="row">
         <div class="col-lg-12">
  <div class="form-group">
 {# <span class="input-group-addon addon-org">Детальна інформація</span>#}
-  <textarea class="form-control bordered-form" placeholder="Введіть детальну інформацію про подію" rows="5" id="comment"></textarea>
+  <textarea class="form-control bordered-form" placeholder="Введіть детальну інформацію про подію" rows="2" id="comment"></textarea>
 </div>
         </div>
         </div>
+
     </div>
+
+            </div>
 
 
 {% endblock %}
