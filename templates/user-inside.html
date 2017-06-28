@@ -32,11 +32,7 @@
             <div class="col-lg-12">
                 <h1 class="page-header">{{ user.username }}</h1>
             </div>
-            <div class="col-lg-12">
-                <div class="form-group">
-  <textarea class="form-control bordered-form" placeholder="Введіть коротку інформацію про себе" rows="1" id="comment"></textarea>
-</div>
-            </div>
+
         </div>
         <!-- /.row -->
 
@@ -51,48 +47,78 @@
                 </div>
             </div>
 
-            <div class="col-md-4" id="user_info_box">
-              <h3>Про мене</h3>
-                <ul>
-                   <div class="input-group">
-                     <span class="input-group-addon addon-org"  >Сфери:</span>
-                     <select id="multiselect" multiple="multiple" style="width: 100% !important; background: transparent;">
-                         <option value="1">Довкілля</option>
-                         <option value="2">Діти</option>
-                         <option value="3">Літні люди</option>
-                         <option value="4">Армія</option>
-                     </select>
-                   </div>
-                   <div class="input-group">
-            <span class="input-group-addon addon-org">Місто:</span>
-                <div class="ui-widget">
-                    <input id="tags" class="form-control bordered-form" placeholder="Додаткова інформація">
-                </div>
-            </div>
-                  <div class="input-group">
-            <span class="input-group-addon addon-org">Адреса:</span>
-            <input id="msg" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
-            </div>
-                   </ul>
-            </div>
-            <div class="col-md-4" id="user_info_box_2">
-              <h3>Додаткова інформація</h3>
-                <ul>
+             <div class="col-lg-8">
 
-                   <div class="input-group">
-            <span class="input-group-addon addon-org">Вебсайт:</span>
-            <input id="msg" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
+                    <div clas="row">
+                        <div class="col-md-6" id="user_info_box_2">
+                            <h3>Про мене</h3>
+                            <ul>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-org">Сфери</span>
+                                    <select id="multiselect" multiple="multiple" style="width: 100% !important;">
+                                        <option value="1">Довкілля</option>
+                                        <option value="2">Діти</option>
+                                        <option value="3">Літні люди</option>
+                                        <option value="4">Армія</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                <span class="input-group-addon addon-org">Місто</span>
+                                    <div class="ui-widget">
+                                      <input id="tags" class="form-control bordered-form" placeholder="Додаткова інформація">
+                                    </div>
+                                </div>
+
+                </ul>
             </div>
-            <div class="input-group">
-            <span class="input-group-addon addon-org">e-mail:</span>
-            <input id="msg" class="form-control bordered-form" name="msg" placeholder="Додаткова інформація">
-            </div>
-                  </ul>
+                    </div>
+
+            <!-- права колонка -->
+                    <div class="row">
+                        <div class="col-md-6" id="user_info_box_2">
+                            <h3>Контактна інформація</h3>
+                                <ul>
+                            <div class="input-group">
+                                <span class="input-group-addon addon-org">Наш вебсайт</span>
+                                <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon addon-org">e-mail</span>
+                                <input id="msg" type="text" class="form-control" name="msg" placeholder="Додаткова інформація">
+                            </div>
+
+                        </ul>
+
             </div>
 
         </div>
+
         <!-- /.row -->
+
+        <hr id="user_hr">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <textarea class="form-control bordered-form" placeholder="Введіть коротку інформацію про подію" rows="1" id="comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="row">
+        <div class="col-lg-12">
+ <div class="form-group">
+{# <span class="input-group-addon addon-org">Детальна інформація</span>#}
+  <textarea class="form-control bordered-form" placeholder="Введіть детальну інформацію про подію" rows="2" id="comment"></textarea>
 </div>
+        </div>
+        </div>
+
+    </div>
+
+            </div>
+
 
 {% endblock %}
 
