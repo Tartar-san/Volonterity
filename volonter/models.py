@@ -21,7 +21,7 @@ class ActivityTypes(models.Model):
 # extending django User model with additional fields
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    city = models.ForeignKey(Cities)
+    city = models.ForeignKey(Cities, related_name='user_city', blank=True, null=True)
     activated = models.BooleanField(default=False)
 
     def __str__(self):

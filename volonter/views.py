@@ -116,23 +116,25 @@ def user_registration(request):
         form = UserForm(request.POST)
 
         if form.is_valid():
+
             confirmation_string = generate_random_string()
+
             while ConfirmationLinks.objects.filter(string=confirmation_string).count() > 0:
                 confirmation_string = generate_random_string()
+
             url = "127.0.0.1:8000/confirm/" + confirmation_string
+
             thread = Thread(target=confirmation_email, args=(form.cleaned_data['email'], url))
             thread.start()
+
             user = User(email=form.cleaned_data['email'],
                         username=form.cleaned_data['username'],
                         password=form.cleaned_data['password']
                         )
             user.save()
-            city = Cities.objects.filter(city=form.cleaned_data['city'])
-            if city.count() == 0:
-                city = Cities(city=form.cleaned_data['city'])
-                city.save()
-            else:
-                city.get()
+            city = Cities.objects.get_or_create(city=form.cleaned_data['city'])[0]
+            print(city)
+
             user_profile = UserProfile(user=user, city=city)
             user_profile.save()
             confirmation_string = ConfirmationLinks(user=user, string=confirmation_string)
