@@ -86,15 +86,25 @@ def enter(request):
 
 
 def user_inside(request, user_id):
+    user = User.objects.get(id=user_id)
+    user_profile = UserProfile.objects.get(user=user)
+
     if (request.user.is_authenticated):
-        return render(request, 'user-inside.html', context={'logged_in': True})
+        return render(request, 'user-inside.html',
+                      context={'logged_in': True, 'username': user.username, 'email': user.email,
+                               'city': user_profile.city.city})
     else:
         return render(request, 'user-inside.html', context={'logged_in': False})
 
 
 def user_outside(request, user_id):
+    user = User.objects.get(id=user_id)
+    user_profile = UserProfile.objects.get(user=user)
+
     if (request.user.is_authenticated):
-        return render(request, 'user-outside.html', context={'logged_in': True})
+        return render(request, 'user-outside.html',
+                      context={'logged_in': True, 'username': user.username, 'email': user.email,
+                               'city': user_profile.city.city})
     else:
         return render(request, 'user-outside.html', context={'logged_in': False})
 
