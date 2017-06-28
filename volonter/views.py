@@ -104,7 +104,7 @@ def user_outside(request, user_id):
     if (request.user.is_authenticated):
         return render(request, 'user-outside.html',
                       context={'logged_in': True, 'username': user.username, 'email': user.email,
-                               'city': user_profile.city.city})
+                               'city': user_profile.city.city, 'user_id': user_profile.user_id})
     else:
         return render(request, 'user-outside.html', context={'logged_in': False})
 
@@ -163,8 +163,10 @@ def create_event(request):
         if form.is_valid():
             event = Event(creator=request.user)
             event.save()
-            event_img = EventImages(event=event, image=form.image, short_description="lol")
+            event_img = EventImages(event=event, image=form.image, name=form.name, short_description="lol")
             event_img.save()
+            event_time = EventTimes(event=event, datetime=form.time)
+            event_time.save()
             return redirect('/')
     else:
         form = EventForm()
