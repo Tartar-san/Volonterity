@@ -85,14 +85,14 @@ def enter(request):
         return render(request, 'enter.html', context={'logged_in': False})
 
 
-def user_inside(request):
+def user_inside(request, user_id):
     if (request.user.is_authenticated):
         return render(request, 'user-inside.html', context={'logged_in': True})
     else:
         return render(request, 'user-inside.html', context={'logged_in': False})
 
 
-def user_outside(request):
+def user_outside(request, user_id):
     if (request.user.is_authenticated):
         return render(request, 'user-outside.html', context={'logged_in': True})
     else:
